@@ -1,282 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inefable KOUMBA | Portfolio</title>
-    <link rel="stylesheet" href="./assets/css/output.css" />
-    <script src="./assets/js/data.js"></script>
-  </head>
 
-  <body>
-    <div class="bg-red-600 text-center text-white text-sm py-2">Hey, my portfolio website is still under development</div>
-    <!-- The header of the page -->
-    <header
-      id="landing"
-      class="w-full bg-gray-800 pb-24"
-      style="
-        background-image: linear-gradient(
-          to top right,
-          rgba(31, 41, 55),
-          rgba(31, 41, 55),
-          #8d8a8a
-        );
-      "
-    >
-      <!-- Socila media icons -->
-      <div></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inefable KOUMBA | Portfolio</title>
+  <link rel="stylesheet" href="./assets/css/output.css" />
+  <script src="./assets/js/data.js"></script>
+</head>
+
+<body>
+  <!-- The header of the page -->
+  <header id="landing" class="w-full bg-[#2e4e65] min-h-screen pb-24">
+    <div class="max-w-[1280px] mx-auto">
       <nav
-        class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:justify-between px-16 py-4 text-white"
-      >
+        class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:justify-between px-16 py-4 text-white">
         <div class="text-xl font-bold text-center">
           <a href="/">&blacktriangleleft; Kims /&blacktriangleright;</a>
         </div>
-        <ul
-          class="flex justify-center space-x-4 font-semibold text-sm md:text-lg"
-        >
-          <li><a href="#about-me" class="show-about-me">ABOUT ME</a></li>
-          <li>
-            <a
-              href="#skills"
-              class="show-about- border-l-2 border-r-2 px-4 border-gray-50"
-              >MY SKILLS</a
-            >
-          </li>
-          <li><a href="#projects">PROJECTS</a></li>
-        </ul>
+        <!-- social media -->
+        <div class="flex gap-x-4 justify-center">
+          <div class="bg-[#3d6684] rounded-full p-1 w-10 h-10 flex justify-center items-center">
+            <a target="_blank" href="https://github.com/InefableKoumba">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="#fff"
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+            </a>
+          </div>
+          <div class="bg-[#3d6684] rounded-full p-2 w-10 h-10 flex items-center">
+            <a target="_blank" href="mailto:inefable.koumba.ik@gmail.com">
+              <img class="w-10 h-10 md:w-12 md:h-12" src="./assets/svg/email.svg" alt="" srcset="" />
+            </a>
+          </div>
+          <div class="bg-[#3d6684] rounded-full p-2 w-10 h-10 flex items-center">
+            <a target="_blank" href="http://www.linkedin.com/in/inefablekoumba">
+              <img class="w-10 h-10 md:w-12 md:h-12" src="./assets/svg/linkedin.svg" alt="" srcset="" />
+            </a>
+          </div>
+        </div>
       </nav>
       <div
-        class="flex flex-col justify-center items-center mt-10 px-4 lg:px-20 spacey-8 md:space-y-10 relative"
-      >
+        class="flex flex-col-reverse lg:flex-row justify-center items-center mt-10 px-4 lg:px-20 spacey-8 md:space-y-10 relative">
+        <!-- div containing my description -->
+        <div class="flex-1 space-y-6 lg:space-y-8 lg:block">
+          <svg class="w-44 absolute hidden xl:block -left-16 top-36" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 245.26 281.326">
+            <g id="Group_9" data-name="Group 9" transform="matrix(0.809, -0.588, 0.588, 0.809, -206.693, -95.574)">
+              <path id="Path_8" data-name="Path 8"
+                d="M95.427,347.377a71.645,71.645,0,0,0-8.02,4.519c-19.562,12.71-36.124,36.194-41.479,68.669a143.708,143.708,0,0,0-1.86,31.082,151.617,151.617,0,0,0,4.95,30.48,1.334,1.334,0,0,0,1.662,1.1,1.649,1.649,0,0,0,.93-1.967,164.305,164.305,0,0,1-3.482-29.845,151.722,151.722,0,0,1,1.947-29.878c5.238-30.714,21.007-52.841,39.58-64.769q2.835-1.822,5.753-3.316a102.322,102.322,0,0,0,1.285,13.922c4.626,28.466,21.151,51.376,46.71,50.908,15.673-.148,24.253-11.044,26.247-24.39a46.662,46.662,0,0,0-12.187-37.961c-15.291-15.884-37.492-18.806-58.245-10.258.885-17.965,6.591-36.259,17.761-50.423A56.647,56.647,0,0,1,147.09,275.1c8.281-2.223,16.664-2.145,24.573-1.1a95.666,95.666,0,0,1,12.25,2.873c.261.109,7.273,1.872,7.365,1.563s-6.748-3.6-7.009-3.706a60.916,60.916,0,0,0-12.1-4.337,52.093,52.093,0,0,0-25.9.312c-11.6,2.914-22.874,9.832-32.061,21.5C102.021,307.675,96.035,327.8,95.427,347.377Zm3.682,4.313a96.089,96.089,0,0,0,1.276,14.839c4.331,26.12,19.47,47.336,42.937,46.69,12.869-.468,19.813-9.35,21.36-20.333A40.436,40.436,0,0,0,154.2,360.319C139.8,345.254,118.671,343.07,99.109,351.69Z"
+                transform="translate(16.234 0)" fill="#467593" fill-rule="evenodd" />
+              <path id="Path_9" data-name="Path 9"
+                d="M67.285,379.332c-2.836-4.7-7.088-11.788-7.536-12.551L51.44,353.4,36.724,332.372a1.045,1.045,0,1,0-1.769,1.114l12.184,22.451,7.489,13.816c.532.931,6.45,11.189,8.91,15.265a6.99,6.99,0,0,0,3.516,3.126,3.947,3.947,0,0,0,3.544-2.176c1.357-2.312,2.831-9.228,3.026-9.927l9.545-33.4c3.168-11.5,5.087-15.009,2.3-15.976-.56-.231-1.156-.084-2.377,1.039a4.8,4.8,0,0,0-.825,1.53c-1.747,3.873-3.377,11.013-3.706,11.941L67.917,374.389C67.828,374.69,67.672,377.133,67.285,379.332Z"
+                transform="translate(0 103.005)" fill="#467593" fill-rule="evenodd" />
+            </g>
+          </svg>
+          <div id="profession" class="py-6 text-white">
+            <!-- Actual description -->
+            <span id="" class="block md:mb-3 font-bold text-center lg:text-left text-3xl md:text-5xl">Your web or mobile
+              app is a click
+              away
+            </span>
+            <div class="md:text-lg py-2 text-center lg:text-left">
+              Hello, I'm Inefable! I'm a software engineer passionate about building innovative web and mobile
+              applications
+              that solve real-world problems. I'm here to bring your ideas to life.
+            </div>
+            <div class="mt-4 flex justify-center lg:justify-start gap-x-4 items-center">
+              <a href="mailto:inefable.koumba.ik@gmail.com"
+                class="rounded bg-white px-4 py-2 text-[#3d6684] font-semibold">Send me a mail</a>
+              <a href="./assets/inefable_resume.pdf" target="_blank">My resume</a>
+            </div>
+          </div>
+        </div>
         <!-- div containing my picture -->
         <div class="flex-1 flex justify-center relative">
-          <div
-            id="circle-1"
-            class="absolute top-0 left-0 w-12 md:w-16 h-12 md:h-16 bg-gray-600 rounded-full shadow"
-            style="
+          <div id="circle-1" class="absolute top-0 left-0 w-12 md:w-16 h-12 md:h-16 bg-gray-600 rounded-full" style="
               background-image: linear-gradient(
                 to top right,
-                rgb(14, 2, 26),
-                #142023,
-                #d5d5d5
+                #2e4e65,
+                #346385,
+                #2f485a
               );
-            "
-          ></div>
-          <div
-            id="circle-2"
-            class="absolute top-10 -right-6 w-6 md:w-10 h-6 md:h-10 bg-gray-500 rounded-full shadow"
-            style="
+            "></div>
+          <div id="circle-2" class="absolute top-10 -right-6 w-6 md:w-10 h-6 md:h-10 bg-gray-500 rounded-full" style="
               background-image: linear-gradient(
                 to top right,
-                rgba(31, 41, 55),
-                #142023,
-                #d5d5d5
+                #2e4e65,
+                #346385,
+                #2f485a
               );
-            "
-          ></div>
-          <div
-            id="circle-3"
-            class="absolute bottom-10 -left-5 md:-left-10 w-6 md:w-10 h-6 md:h-10 bg-gray-600 rounded-full shadow"
-            style="
+            "></div>
+          <div id="circle-3"
+            class="absolute bottom-10 -left-5 md:-left-10 w-6 md:w-10 h-6 md:h-10 bg-gray-600 rounded-full" style="
               background-image: linear-gradient(
                 to top right,
-                rgba(31, 41, 55),
-                #142023,
-                #d5d5d5
+                #2e4e65,
+                #346385,
+                #2f485a
               );
-            "
-          ></div>
-          <div
-            id="circle-4"
-            class="absolute bottom-0 right-0 w-16 md:w-24 h-16 md:h-24 bg-gray-500 rounded-full shadow"
-            style="
+            "></div>
+          <div id="circle-4" class="absolute bottom-0 right-0 w-16 md:w-24 h-16 md:h-24 rounded-full" style="
               background-image: linear-gradient(
                 to top right,
-                rgba(31, 41, 55),
-                #142023,
-                #d5d5d5
+                #2e4e65,
+                #346385,
+                #2f485a
               );
-            "
-          ></div>
-          <div
-            class="w-52 h-52 md:h-72 md:w-72 rounded-full bg-cover bg-top border-gray-100 border-2"
-            style="
-              background-image: linear-gradient(
-                  to bottom,
-                  rgba(15, 15, 15, 0.397),
-                  rgba(71, 69, 69, 0.336)
-                ),
-                url(./assets/img/kims.jpg);
-            "
-          ></div>
-        </div>
-        <!-- div containing my description -->
-        <div
-          class="flex-1 space-y-6 lg:space-y-8 flex flex-col items-center lg:block"
-        >
-          <!-- first div -->
-          <div id="profession" class="py-6 text-white text-center">
-            <!-- Actual description -->
-            <span
-              id=""
-              class="block md:mb-3 font-bold text-3xl md:text-5xl"
-              >Full-stack Developer</span
-            >
-            <div class="text-base md:text-2xl py-2"></div>
-              Hello, my name is Inefable, let us chat !
-            </div>
-          </div>
-          <!-- social media -->
-          <div class="flex gap-x-4 justify-center">
-            <div class="bg-slate-500 rounded-full p-1 w-10 h-10 flex items-center">
-              <a target="_blank" href="https://www.hackerrank.com/iloveyoujulina">
-              <img
-                class="h-10 w-10 md:w-12 md:h-12"
-                src="./assets/svg/hackerrank.svg"
-                alt=""
-                srcset=""
-              />
-            </a>
-            </div>
-            <div class="bg-slate-500 rounded-full p-2 w-10 h-10 flex items-center">
-              <a target="_blank" href="mailto:inefable.koumba.ik@gmail.com">
-              <img
-                class="w-10 h-10 md:w-12 md:h-12"
-                src="./assets/svg/email.svg"
-                alt=""
-                srcset=""
-              />
-            </a>
-            </div>
-            <div class="bg-slate-500 rounded-full p-2 w-10 h-10 flex items-center">
-              <a target="_blank" href="http://www.linkedin.com/in/inefablekoumba">
-              <img
-                class="w-10 h-10 md:w-12 md:h-12"
-                src="./assets/svg/linkedin.svg"
-                alt=""
-                srcset=""
-              />
-            </a>
-            </div>
+            "></div>
+          <div class="w-52 h-52 md:h-96 md:w-96 rounded-full bg-cover bg-top border-[#759ab5] border-2">
+            <img src="./assets/img/kims.png" alt="" srcset="">
           </div>
         </div>
       </div>
-    </header>
-    <section id="about-me" class="bg-gray-100">
-      <div class="py-12 px-4 md:w-1/2 mx-auto">
-        <div class="space-y-4">
-          <h2 class="font-bold text-3xl md:text-5xl text-slate-800">About me</h2>
-          <p class="md:text-xl md:font-semibold text-gray-800">
-            Hi ! my name is Inefable I design and code apps for web, desktop and
-            android. Best practices and latest technologies are always my top
-            priorities. Currently I'm working as a freelancer and I am open to
-            remote work. Check out my
-            <a target="_blank" href="./assets/files/inefable_resume.pdf" class="border-b-2 border-gray-600"> resume</a>
-          </p>
-        </div>
-        <div class="w-max mt-4">
-          <div>
-          <a target="_blank" href="./assets/files/inefable_resume.pdf" class="bg-gray-800 text-white px-4 md:px-8 py-3 rounded-md flex gap-x-2"
-            >
-            <img class="w-6 h-6" src="./assets/svg/pdf.svg" alt="PDF Image" srcset="">
-            <span>Resume</span>
-            </a
-          >
-        </div>
-        </div>
-      </div>
-    </section>
-    <!-- My skills -->
-    <section id="skills" class="bg-gradient-to-tr">
-      <div class="relative py-2 md:py-12 px-4 md:w-1/2 md:mx-auto">
-        <div>
-          <div class="mb-8 mt-10 md:pt-0 md:mt-0">
-            <h2 class="text-3xl md:text-5xl font-bold mb-1 text-gray-800">My Skills</h2>
-            <p class="md:text-xl text-gray-800">
-              Bellow is the list of my main competences
-            </p>
-          </div>
-          <div
-            class="bg-gray-800 mx-auto rounded-2xl py-12 md:px-24 space-y-8 md:text-center px-4"
-          >
-            <div>
-              <span class="text-white text-xl block mb-4"
-                >Programming Languages</span
-              >
-              <div
-                class="flex flex-wrap justify-start md:justify-center gap-x-4 gap-y-2"
-              >
-                <div class="bg-gray-200 rounded px-3 py-2">JavaScript</div>
-                <div class="bg-gray-200 rounded px-3 py-2">Dart</div>
-                <div class="bg-gray-200 rounded px-3 py-2">Python</div>
-                <div class="bg-gray-200 rounded px-3 py-2">C#</div>
-              </div>
-            </div>
-            <div>
-              <span class="text-white text-xl block mb-4">Databases</span>
-              <div
-                class="flex flex-wrap justify-start md:justify-center gap-x-4 gap-y-2"
-              >
-                <div class="bg-gray-200 rounded px-3 py-2">PostgresQL</div>
-                <div class="bg-gray-200 rounded px-3 py-2">MySQL</div>
-                <div class="bg-gray-200 rounded px-3 py-2">MongoDB</div>
-                <div class="bg-gray-200 rounded px-3 py-2">SQLite</div>
-              </div>
-            </div>
-            <div>
-              <span class="text-white text-xl block mb-4"
-                >Front-end Libraries / Frameworks</span
-              >
-              <div
-                class="flex flex-wrap justify-start md:justify-center gap-x-4 gap-y-2"
-              >
-                <div class="bg-gray-200 rounded px-3 py-2">React.js</div>
-                <div class="bg-gray-200 rounded px-3 py-2">React Native</div>
-                <div class="bg-gray-200 rounded px-3 py-2">Flutter</div>
-              </div>
-            </div>
-            <div>
-              <span class="text-white text-xl block mb-4"
-                >Back-end Libraries / Frameworks</span
-              >
-              <div
-                class="flex flex-wrap justify-start md:justify-center gap-x-4 gap-y-2"
-              >
-                <div class="bg-gray-200 rounded px-3 py-2">Node.js</div>
-                <div class="bg-gray-200 rounded px-3 py-2">Django</div>
-                <div class="bg-gray-200 rounded px-3 py-2">Nest.js</div>
-              </div>
-            </div>
-            <div>
-              <span class="text-white text-xl block mb-4">DevOps Tools</span>
-              <div
-                class="flex flex-wrap justify-start md:justify-center gap-x-4 gap-y-2"
-              >
-                <div class="bg-gray-200 rounded px-3 py-2">Git / Github</div>
-                <div class="bg-gray-200 rounded px-3 py-2">CD / CI</div>
-              </div>
-            </div>
-            <div>
-              <span class="text-white text-xl block mb-4">UI/UX Tools</span>
-              <div
-                class="flex flex-wrap justify-start md:justify-center gap-x-4 gap-y-2"
-              >
-                <div class="bg-gray-200 rounded px-3 py-2">Adobe XD</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <footer class="py-10">
-      <div class="flex justify-center text-gray-800 text-sm">
-        &copy; 2021 Inefable KOUMBA | All Rights Reserved
-      </div>
-    </footer>
-    <!-- Scripts -->
-    <script src="./assets/js/ScrollTrigger.min.js"></script>
-    <script src="./assets/js/gsap.min.js"></script>
-    <script src="./assets/js/index.js"></script>
-  </body>
+    </div>
+    </div>
+    <div class="absolute bottom-5 left-0 text-center text-sm text-white w-full">
+      &copy; 2021 <a href="https://www.linkedin.com/in/inefablekoumba" target="_blank">Inefable KOUMBA</a> | All Rights
+      Reserved
+    </div>
+  </header>
+  <!-- Scripts -->
+  <script src="./assets/js/ScrollTrigger.min.js"></script>
+  <script src="./assets/js/gsap.min.js"></script>
+  <script src="./assets/js/index.js"></script>
+</body>
+
 </html>
