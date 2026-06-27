@@ -1,0 +1,198 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════
+   Design System — Minimal Professional Portfolio
+   "Luxury through Restraint"
+═══════════════════════════════════════════════════════ */
+@theme inline {
+  /* ── Colors ── */
+  --color-primary:                  #000000;
+  --color-on-primary:               #ffffff;
+  --color-primary-container:        #1c1b1b;
+  --color-on-primary-container:     #858383;
+  --color-primary-fixed:            #e5e2e1;
+
+  --color-secondary:                #4a6270;
+  --color-on-secondary:             #ffffff;
+  --color-secondary-container:      #cae3f4;
+  --color-on-secondary-container:   #4e6674;
+  --color-secondary-fixed:          #cde6f7;
+
+  --color-tertiary:                 #000000;
+  --color-on-tertiary:              #ffffff;
+  --color-tertiary-container:       #1a1c1c;
+  --color-tertiary-fixed:           #e2e2e2;
+
+  --color-surface:                  #fbf9f9;
+  --color-surface-dim:              #dbdad9;
+  --color-surface-bright:           #fbf9f9;
+  --color-surface-variant:          #e3e2e2;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low:    #f5f3f3;
+  --color-surface-container:        #efeded;
+  --color-surface-container-high:   #e9e8e7;
+  --color-surface-container-highest:#e3e2e2;
+  --color-surface-tint:             #5f5e5e;
+
+  --color-on-surface:               #1b1c1c;
+  --color-on-surface-variant:       #444748;
+  --color-on-background:            #1b1c1c;
+  --color-background:               #fbf9f9;
+
+  --color-outline:                  #747878;
+  --color-outline-variant:          #c4c7c7;
+
+  --color-inverse-surface:          #303031;
+  --color-inverse-on-surface:       #f2f0f0;
+
+  /* ── Spacing ── */
+  --spacing-section-gap:    128px;
+  --spacing-gutter:         32px;
+  --spacing-margin-desktop: 80px;
+  --spacing-margin-mobile:  24px;
+  --spacing-unit:           8px;
+
+  /* ── Max-width ── */
+  --width-container-max: 1200px;
+
+  /* ── Border radius ── */
+  --radius-DEFAULT: 0.125rem;
+  --radius-lg:      0.25rem;
+  --radius-xl:      0.5rem;
+  --radius-full:    0.75rem;
+
+  /* ── Font families ── */
+  --font-display:          "Newsreader", serif;
+  --font-headline-lg:      "Newsreader", serif;
+  --font-headline-md:      "Newsreader", serif;
+  --font-headline-sm:      "Newsreader", serif;
+  --font-headline-lg-mob:  "Newsreader", serif;
+  --font-body-lg:          "Hanken Grotesk", sans-serif;
+  --font-body-md:          "Hanken Grotesk", sans-serif;
+  --font-label-caps:       "Hanken Grotesk", sans-serif;
+  --font-sans:             "Hanken Grotesk", sans-serif;
+
+  /* ── Font sizes ── */
+  --text-display:          72px;
+  --text-headline-lg:      48px;
+  --text-headline-md:      32px;
+  --text-headline-sm:      24px;
+  --text-headline-lg-mob:  32px;
+  --text-body-lg:          18px;
+  --text-body-md:          16px;
+  --text-label-caps:       12px;
+}
+
+/* ═══════════════════════════════════════════════════════
+   Base styles
+═══════════════════════════════════════════════════════ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+  font-family: var(--font-body-md);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--color-secondary-container);
+  color: var(--color-on-secondary-container);
+}
+
+/* ── Material Symbols ── */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+/* ── Skill tag ── */
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  background: var(--color-surface-container);
+  padding: 4px 10px;
+  font-family: var(--font-label-caps);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-on-surface-variant);
+  border-radius: var(--radius-DEFAULT);
+}
+
+/* ── Scroll reveal ── */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.scroll-reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Project card image zoom ── */
+.project-card:hover .project-image {
+  transform: scale(1.03);
+}
+
+/* ── Form inputs (bottom border only) ── */
+.form-input {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--color-outline-variant);
+  padding: 14px 0;
+  font-family: var(--font-body-lg);
+  font-size: var(--text-body-lg);
+  line-height: 1.6;
+  color: var(--color-on-surface);
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+.form-input:focus {
+  border-bottom-color: var(--color-secondary);
+}
+.form-input::placeholder {
+  color: var(--color-outline-variant);
+}
+
+/* ── Mobile menu ── */
+#mobile-menu {
+  transition:
+    max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.3s ease;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+#mobile-menu.open {
+  max-height: 320px;
+  opacity: 1;
+}
+
+/* ── Scroll progress bar ── */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: var(--color-on-surface);
+  z-index: 100;
+  transition: width 0.1s linear;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html { scroll-behavior: auto; }
+}

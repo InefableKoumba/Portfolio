@@ -1,0 +1,180 @@
+{
+  "nav": {
+    "work": "Projets",
+    "about": "À propos",
+    "skills": "Compétences",
+    "contact": "Contact",
+    "resume": "CV",
+    "toggle_menu": "Ouvrir le menu de navigation"
+  },
+  "hero": {
+    "location": "BRAZZAVILLE, CONGO — DISPONIBLE À DISTANCE",
+    "headline_1": "Construire des logiciels robustes avec une",
+    "headline_italic": "clarté architecturale",
+    "headline_2": ".",
+    "bio": "Je suis Inefable Koumba — Développeur Logiciel & Responsable Technique. Fondateur de FRANZER OÜ. Je conçois et réalise des plateformes full-stack, des applications mobiles et des solutions de paiement haute performance qui soutiennent de véritables entreprises dans les marchés émergents et au-delà.",
+    "cta_work": "Voir mes projets",
+    "cta_contact": "Me contacter",
+    "badge": "FONDÉ EN 2024 / FRANZER OÜ",
+    "stats": [
+      { "value": "4+", "label": "Ans d'expérience" },
+      { "value": "10+", "label": "Projets livrés" },
+      { "value": "4", "label": "Certifications SAS" },
+      { "value": "2+", "label": "Pays desservis" }
+    ]
+  },
+  "work": {
+    "title": "Projets Sélectionnés",
+    "date_range": "2022 — 2025",
+    "projects": [
+      {
+        "id": "volten",
+        "name": "Volten AI",
+        "tags": ["ORCHESTRATION IA", "MICROSERVICES", "AUTOMATISATION"],
+        "description": "Plateforme d'orchestration IA omnicanale et d'automatisation des flux. Construite sur une architecture microservices pour une livraison d'IA d'entreprise scalable et fiable."
+      },
+      {
+        "id": "rhodium",
+        "name": "Rhodium",
+        "tags": ["PLATEFORME CONCIERGERIE", "NEXT.JS"],
+        "description": "Découverte multi-services & réservation conciergerie pour événements premium, restauration et transport."
+      },
+      {
+        "id": "rhopay",
+        "name": "RhoPay",
+        "tags": ["FINTECH", "MOBILE", "FLUTTER"],
+        "description": "Paiement mobile & transfert d'argent avec intégration MTN MoMo et Airtel Money, émission de cartes et rechargement de compte."
+      },
+      {
+        "id": "luxembourg",
+        "name": "Sandweiler & Berdorf",
+        "tags": ["WEB", "CMS", "LUXEMBOURG"],
+        "description": "Sites municipaux haute-fidélité pour Sandweiler et Berdorf (Luxembourg) avec intégration CMS transparente."
+      }
+    ]
+  },
+  "about": {
+    "label": "LA PERSONNE",
+    "headline_1": "Ingénieur, fondateur et",
+    "headline_italic": "résolveur de problèmes",
+    "headline_2": "dans l'âme.",
+    "bio_1": "Je suis Inefable Koumba, Développeur Logiciel et Responsable Technique basé à Brazzaville, en République du Congo. J'ai fondé FRANZER OÜ en 2024 pour concevoir des logiciels d'entreprise et des solutions de paiement au service de véritables entreprises à travers l'Afrique et au-delà.",
+    "bio_2": "Mon travail couvre l'ensemble du stack — de la conception d'architectures microservices et de backends haute performance en Go à la réalisation d'interfaces mobiles pixel-perfect avec Flutter et React Native. Je me soucie profondément de la qualité technique et de l'expérience humaine de l'autre côté de l'écran.",
+    "bio_3_prefix": "Je poursuis actuellement un",
+    "bio_3_degree": "Bachelor en Développement Logiciel",
+    "bio_3_suffix": "à la Brigham Young University – Idaho, en m'appuyant sur une formation en Administration des Systèmes & Réseaux de l'ESGAE à Brazzaville.",
+    "education_label": "FORMATION",
+    "education": [
+      {
+        "school": "Brigham Young University – Idaho",
+        "degree": "B.Sc. Développement Logiciel",
+        "period": "Sept. 2023 — En cours",
+        "location": "Rexburg, Idaho, États-Unis"
+      },
+      {
+        "school": "ESGAE",
+        "degree": "Licence — Administration des Systèmes & Réseaux",
+        "period": "Oct. 2018 — Juin 2021",
+        "location": "Brazzaville, Congo"
+      }
+    ],
+    "experience_label": "EXPÉRIENCE",
+    "experience": [
+      {
+        "period": "JANV. 2024 — PRÉSENT",
+        "company": "FRANZER OÜ",
+        "role": "Fondateur & Responsable Technique",
+        "desc": "Décisions architecturales, intégrations backend haute performance & ingénierie UI/UX pour applications d'entreprise et solutions de paiement.",
+        "current": true
+      },
+      {
+        "period": "JANV. 2024 — PRÉSENT",
+        "company": "MAZALA-FIRM",
+        "role": "PDG & Développeur Full-Stack",
+        "desc": "Direction du développement web & mobile sur React, Next.js et Flutter tout en gérant des équipes de développement transfonctionnelles.",
+        "current": true
+      },
+      {
+        "period": "JANV. 2022 — PRÉSENT",
+        "company": "Metrologix",
+        "role": "Consultant IT",
+        "desc": "Plateforme de gestion des factures (gain de temps > 50%), déploiements de terminaux de vente pour Total Energies & PUMA, configuration DOMS PSS 5000.",
+        "current": false
+      },
+      {
+        "period": "OCT. 2021 — DÉC. 2022",
+        "company": "E-Connect",
+        "role": "Développeur Front-End · Luxembourg",
+        "desc": "Construction de sandweiler.lu & berdorf.lu — sites municipaux haute-fidélité avec intégration CMS transparente.",
+        "current": false
+      }
+    ]
+  },
+  "skills": {
+    "title": "Compétences Clés",
+    "categories": [
+      {
+        "id": "languages",
+        "icon": "code",
+        "title": "Langages & Frameworks",
+        "type": "tags",
+        "items": ["Golang", "JavaScript", "Python", "Dart", "HTML / CSS", "React Native", "Next.js", "NestJS", "Flutter", "Expo", "Bun", "SAS"]
+      },
+      {
+        "id": "infra",
+        "icon": "storage",
+        "title": "Données & Infrastructure",
+        "type": "tags",
+        "items": ["PostgreSQL", "pgvector", "MongoDB", "Redis", "MySQL", "Turso", "AWS", "Cloudflare", "IONOS", "Render", "CI / CD", "Git"]
+      },
+      {
+        "id": "certs",
+        "icon": "verified",
+        "title": "Certifications",
+        "type": "list",
+        "items": [
+          "SAS Certified Associate : Modélisation avec SAS Visual Statistics",
+          "SAS Certified Specialist : Analyse Visuelle avec SAS Viya",
+          "SAS Certified Associate : Fondamentaux de la Programmation SAS 9.4",
+          "Nanodegree Développement Web Full-Stack"
+        ]
+      }
+    ],
+    "spoken_label": "LANGUES PARLÉES",
+    "spoken": ["Français — Natif", "Anglais — Avancé"],
+    "professional_label": "COMPÉTENCES PROFESSIONNELLES",
+    "professional": ["Leadership d'équipe", "Gestion du temps", "Pensée critique", "Résolution de problèmes", "Rédaction professionnelle", "Analyse de données", "Visualisation de données", "Linux / Bash", "Algorithmes & Structures de données"]
+  },
+  "cta": {
+    "label": "OUVERT AUX OPPORTUNITÉS",
+    "headline_1": "Construisons ensemble quelque chose",
+    "headline_italic": "durable",
+    "headline_2": ".",
+    "body": "Que vous ayez un projet en tête, une équipe à faire grandir, ou simplement envie de parler technologie — ma boîte mail est ouverte."
+  },
+  "contact": {
+    "direct_label": "EMAIL DIRECT",
+    "phone_label": "TÉLÉPHONE",
+    "location_label": "LOCALISATION",
+    "location_city": "Brazzaville",
+    "location_country": "République du Congo",
+    "location_remote": "Disponible à distance",
+    "social_label": "RÉSEAUX",
+    "form_label": "ENVOYER UN MESSAGE",
+    "name_label": "NOM COMPLET",
+    "name_placeholder": "Votre nom",
+    "email_label": "ADRESSE EMAIL",
+    "email_placeholder": "email@exemple.com",
+    "subject_label": "SUJET",
+    "subjects": ["Renseignement général", "Collaboration sur un projet", "Responsable Technique / Conseil", "Opportunité d'emploi", "Médias & Presse"],
+    "message_label": "VOTRE MESSAGE",
+    "message_placeholder": "Décrivez brièvement votre projet ou idée",
+    "submit": "ENVOYER",
+    "sending": "ENVOI EN COURS...",
+    "sent": "MESSAGE ENVOYÉ"
+  },
+  "footer": {
+    "back_to_top": "Haut de page",
+    "copyright": "© 2025 Inefable Koumba. Tous droits réservés."
+  }
+}
