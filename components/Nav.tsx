@@ -1,8 +1,9 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import type { Dictionary } from '@/app/[lang]/dictionaries'
+import { Globe, ChevronDown, Check } from 'lucide-react'
 
 type NavDict = Dictionary['nav']
 
@@ -13,8 +14,10 @@ interface NavProps {
 
 export default function Nav({ dict, locale }: NavProps) {
   const [menuOpen, setMenuOpen] = useState(false)
-  const otherLocale = locale === 'en' ? 'fr' : 'en'
+  const [langDropdownOpen, setLangDropdownOpen] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null)
 
+  const otherLocale = locale === 'en' ? 'fr' : 'en'
   const close = () => setMenuOpen(false)
 
   const links = [
@@ -23,6 +26,23 @@ export default function Nav({ dict, locale }: NavProps) {
     { id: 'nav-skills',  href: '#skills',  label: dict.skills },
     { id: 'nav-contact', href: '#contact', label: dict.contact },
   ]
+
+  const languages = [
+    { code: 'en', name: 'English', flag: '🇬🇧' },
+    { code: 'fr', name: 'Français', flag: '🇫🇷' },
+  ]
+
+  const currentLang = languages.find((l) => l.code === locale) || languages[0]
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setLangDropdownOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
 
   return (
     <>
@@ -63,14 +83,43 @@ export default function Nav({ dict, locale }: NavProps) {
                 ))}
               </div>
 
-              {/* Language switcher */}
-              <Link
-                href={`/${otherLocale}`}
-                className="font-ibm-mono text-xs font-semibold tracking-widest uppercase text-brand-data border border-brand-data px-3 py-1 no-underline rounded-full hover:bg-brand-data hover:text-brand-bg transition-all duration-250 ease-in-out"
-                title={`Switch to ${otherLocale === 'fr' ? 'Français' : 'English'}`}
-              >
-                {otherLocale.toUpperCase()}
-              </Link>
+              {/* Language Selector Dropdown */}
+              <div className="relative" ref={dropdownRef}>
+                <button
+                  type="button"
+                  onClick={() => setLangDropdownOpen((prev) => !prev)}
+                  className="flex items-center gap-2 font-ibm-mono text-xs font-semibold tracking-wider uppercase text-brand-data border border-brand-data/50 bg-brand-card/60 px-3.5 py-1.5 rounded-full hover:border-brand-data hover:bg-brand-card transition-all duration-200 cursor-pointer"
+                  aria-expanded={langDropdownOpen}
+                  aria-label="Select language"
+                >
+                  <span className="text-base leading-none">{currentLang.flag}</span>
+                  <span>{currentLang.code.toUpperCase()}</span>
+                  <ChevronDown className={`w-3.5 h-3.5 text-brand-data transition-transform duration-200 ${langDropdownOpen ? 'rotate-180' : ''}`} />
+                </button>
+
+                {langDropdownOpen && (
+                  <div className="absolute right-0 mt-2 w-40 rounded-2xl bg-brand-card border border-outline shadow-xl py-2 z-50 overflow-hidden backdrop-blur-lg">
+                    {languages.map((lang) => (
+                      <Link
+                        key={lang.code}
+                        href={`/${lang.code}`}
+                        onClick={() => setLangDropdownOpen(false)}
+                        className={`flex items-center justify-between w-full px-4 py-2.5 text-xs font-ibm-sans font-medium no-underline transition-colors ${
+                          locale === lang.code
+                            ? 'text-brand-signal bg-brand-bg/60'
+                            : 'text-brand-text hover:bg-brand-bg/40 hover:text-brand-data'
+                        }`}
+                      >
+                        <div className="flex items-center gap-2.5">
+                          <span className="text-lg leading-none">{lang.flag}</span>
+                          <span>{lang.name}</span>
+                        </div>
+                        {locale === lang.code && <Check className="w-3.5 h-3.5 text-brand-signal" />}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
 
               {/* Résumé button */}
               <a
@@ -114,19 +163,27 @@ export default function Nav({ dict, locale }: NavProps) {
                   {l.label}
                 </a>
               ))}
-              <div className="flex gap-3 mt-1 flex-wrap">
-                <Link
-                  href={`/${otherLocale}`}
-                  onClick={close}
-                  className="font-ibm-mono text-xs font-semibold tracking-widest uppercase text-brand-data border border-brand-data px-4 py-1.5 rounded-full no-underline"
-                >
-                  {otherLocale.toUpperCase()}
-                </Link>
+              <div className="flex gap-3 mt-2 flex-wrap items-center">
+                {languages.map((lang) => (
+                  <Link
+                    key={lang.code}
+                    href={`/${lang.code}`}
+                    onClick={close}
+                    className={`flex items-center gap-2 font-ibm-mono text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full no-underline border transition-all ${
+                      locale === lang.code
+                        ? 'border-brand-signal text-brand-signal bg-brand-card'
+                        : 'border-outline text-brand-muted hover:text-brand-text'
+                    }`}
+                  >
+                    <span className="text-base leading-none">{lang.flag}</span>
+                    <span>{lang.name}</span>
+                  </Link>
+                ))}
                 <a
                   href="/assets/inefable_resume.pdf"
                   target="_blank"
                   rel="noopener"
-                  className="font-ibm-mono text-xs font-semibold tracking-wider uppercase bg-brand-signal px-5 py-1.5 rounded-full text-brand-bg no-underline"
+                  className="font-ibm-mono text-xs font-semibold tracking-wider uppercase bg-brand-signal px-5 py-2 rounded-full text-brand-bg no-underline mt-1 w-full text-center"
                 >
                   {dict.resume}
                 </a>

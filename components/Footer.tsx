@@ -1,6 +1,7 @@
 'use client'
 
 import type { Dictionary } from '@/app/[lang]/dictionaries'
+import { FaLinkedin, FaGithub, FaFacebook, FaXTwitter } from 'react-icons/fa6'
 
 type FooterDict = Dictionary['footer']
 
@@ -29,30 +30,46 @@ export default function Footer({ dict, locale }: FooterProps) {
           </p>
         </div>
 
-        <div className="flex gap-10 font-ibm-mono text-xs font-semibold tracking-wider uppercase">
+        <div className="flex gap-4 items-center">
           <a
             href="https://www.linkedin.com/in/inefablekoumba"
             target="_blank"
             rel="noopener"
-            className="text-brand-muted underline underline-offset-4 transition-colors duration-300 hover:text-brand-signal"
+            aria-label="LinkedIn"
+            title="LinkedIn"
+            className="w-9 h-9 rounded-full border border-outline bg-brand-card/50 flex items-center justify-center text-brand-muted hover:text-brand-signal hover:border-brand-signal hover:bg-brand-card transition-all duration-300"
           >
-            LinkedIn
+            <FaLinkedin className="w-4 h-4" />
           </a>
           <a
             href="https://github.com/InefableKoumba"
             target="_blank"
             rel="noopener"
-            className="text-brand-muted underline underline-offset-4 transition-colors duration-300 hover:text-brand-signal"
+            aria-label="GitHub"
+            title="GitHub"
+            className="w-9 h-9 rounded-full border border-outline bg-brand-card/50 flex items-center justify-center text-brand-muted hover:text-brand-signal hover:border-brand-signal hover:bg-brand-card transition-all duration-300"
           >
-            GitHub
+            <FaGithub className="w-4 h-4" />
           </a>
           <a
-            href="/assets/inefable_resume.pdf"
+            href="https://facebook.com/inefablekoumba"
             target="_blank"
             rel="noopener"
-            className="text-brand-muted underline underline-offset-4 transition-colors duration-300 hover:text-brand-signal"
+            aria-label="Facebook"
+            title="Facebook"
+            className="w-9 h-9 rounded-full border border-outline bg-brand-card/50 flex items-center justify-center text-brand-muted hover:text-brand-signal hover:border-brand-signal hover:bg-brand-card transition-all duration-300"
           >
-            CV / Résumé
+            <FaFacebook className="w-4 h-4" />
+          </a>
+          <a
+            href="https://x.com/inefablekoumba"
+            target="_blank"
+            rel="noopener"
+            aria-label="Twitter / X"
+            title="Twitter / X"
+            className="w-9 h-9 rounded-full border border-outline bg-brand-card/50 flex items-center justify-center text-brand-muted hover:text-brand-signal hover:border-brand-signal hover:bg-brand-card transition-all duration-300"
+          >
+            <FaXTwitter className="w-4 h-4" />
           </a>
         </div>
 

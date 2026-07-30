@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import type { Dictionary } from "@/app/[lang]/dictionaries";
+import { FaLinkedin, FaGithub, FaFacebook, FaXTwitter } from "react-icons/fa6";
 
 type ContactDict = Dictionary["contact"];
 
@@ -80,18 +81,17 @@ export default function Contact({ dict }: { dict: ContactDict }) {
             <span className="font-ibm-mono text-xs font-semibold tracking-wider text-brand-data block mb-3 uppercase">
               {dict.social_label}
             </span>
-            <ul className="flex flex-col gap-3 list-none p-0 m-0">
+            <ul className="flex flex-wrap gap-3 list-none p-0 m-0">
               <li>
                 <a
                   href="https://www.linkedin.com/in/inefablekoumba"
                   target="_blank"
                   rel="noopener"
-                  className="font-ibm-sans text-base text-brand-text no-underline inline-flex items-center gap-2 hover:text-brand-signal transition-colors duration-300"
+                  aria-label="LinkedIn Profile"
+                  className="w-10 h-10 rounded-full border border-outline bg-brand-bg flex items-center justify-center text-brand-text hover:text-brand-signal hover:border-brand-signal hover:scale-105 transition-all duration-300"
+                  title="LinkedIn"
                 >
-                  <span className="material-symbols-outlined text-[18px] text-brand-signal">
-                    link
-                  </span>
-                  LinkedIn
+                  <FaLinkedin className="w-5 h-5" />
                 </a>
               </li>
               <li>
@@ -99,12 +99,35 @@ export default function Contact({ dict }: { dict: ContactDict }) {
                   href="https://github.com/InefableKoumba"
                   target="_blank"
                   rel="noopener"
-                  className="font-ibm-sans text-base text-brand-text no-underline inline-flex items-center gap-2 hover:text-brand-signal transition-colors duration-300"
+                  aria-label="GitHub Profile"
+                  className="w-10 h-10 rounded-full border border-outline bg-brand-bg flex items-center justify-center text-brand-text hover:text-brand-signal hover:border-brand-signal hover:scale-105 transition-all duration-300"
+                  title="GitHub"
                 >
-                  <span className="material-symbols-outlined text-[18px] text-brand-signal">
-                    code
-                  </span>
-                  GitHub
+                  <FaGithub className="w-5 h-5" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://facebook.com/inefablekoumba"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Facebook Profile"
+                  className="w-10 h-10 rounded-full border border-outline bg-brand-bg flex items-center justify-center text-brand-text hover:text-brand-signal hover:border-brand-signal hover:scale-105 transition-all duration-300"
+                  title="Facebook"
+                >
+                  <FaFacebook className="w-5 h-5" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://x.com/inefablekoumba"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Twitter / X Profile"
+                  className="w-10 h-10 rounded-full border border-outline bg-brand-bg flex items-center justify-center text-brand-text hover:text-brand-signal hover:border-brand-signal hover:scale-105 transition-all duration-300"
+                  title="Twitter / X"
+                >
+                  <FaXTwitter className="w-5 h-5" />
                 </a>
               </li>
             </ul>
