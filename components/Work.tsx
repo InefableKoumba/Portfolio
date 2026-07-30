@@ -12,58 +12,30 @@ const PROJECT_IMAGES: Record<string, string> = {
   luxembourg:'https://images.unsplash.com/photo-1467293622093-9f15c96be70f?w=900&q=80&auto=format&fit=crop',
 }
 
-const PROJECT_LAYOUT: Record<string, { col: string; aspect: string; delay?: string }> = {
-  volten:    { col: 'col-span-12 md:col-span-8', aspect: '16/10' },
-  rhodium:   { col: 'col-span-12 md:col-span-4', aspect: '4/5', delay: '150ms' },
-  rhopay:    { col: 'col-span-12 md:col-span-5 md:mt-12', aspect: '1/1', delay: '100ms' },
-  luxembourg:{ col: 'col-span-12 md:col-span-7 md:mt-12', aspect: '16/9', delay: '250ms' },
+const PROJECT_LAYOUT: Record<string, { col: string; aspect: string; delayClass?: string }> = {
+  volten:    { col: 'col-span-12 md:col-span-8', aspect: 'aspect-[16/10]' },
+  rhodium:   { col: 'col-span-12 md:col-span-4', aspect: 'aspect-[4/5]', delayClass: 'transition-delay-150' },
+  rhopay:    { col: 'col-span-12 md:col-span-5 md:mt-12', aspect: 'aspect-square', delayClass: 'transition-delay-100' },
+  luxembourg:{ col: 'col-span-12 md:col-span-7 md:mt-12', aspect: 'aspect-[16/9]', delayClass: 'transition-delay-250' },
 }
 
 export default function Work({ dict }: { dict: WorkDict }) {
   return (
     <section
       id="work"
-      style={{
-        paddingLeft: 'clamp(24px, 6vw, 80px)',
-        paddingRight: 'clamp(24px, 6vw, 80px)',
-        paddingBottom: '128px',
-        maxWidth: '1200px',
-        margin: '0 auto',
-      }}
+      className="px-[clamp(24px,6vw,80px)] pb-32 max-w-[1440px] mx-auto"
     >
       {/* Header */}
-      <div
-        className="scroll-reveal"
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'flex-end',
-          marginBottom: '64px',
-          borderBottom: '1px solid var(--color-outline-variant)',
-          paddingBottom: '32px',
-        }}
-      >
-        <h2
-          style={{
-            fontFamily: 'var(--font-newsreader)',
-            fontSize: 'clamp(28px, 4vw, 48px)',
-            fontWeight: 400,
-            lineHeight: 1.2,
-          }}
-        >
-          {dict.title}
-        </h2>
-        <p
-          className="hidden md:block"
-          style={{
-            fontFamily: 'var(--font-hanken)',
-            fontSize: '12px',
-            fontWeight: 600,
-            letterSpacing: '0.1em',
-            color: 'var(--color-on-surface-variant)',
-            textTransform: 'uppercase',
-          }}
-        >
+      <div className="scroll-reveal flex justify-between items-end mb-16 border-b border-outline pb-8">
+        <div>
+          <span className="signal-trace font-ibm-mono text-xs font-semibold tracking-[0.12em] uppercase text-brand-data inline-block mb-3">
+            PORTFOLIO
+          </span>
+          <h2 className="font-jetbrains text-[clamp(28px,4vw,48px)] font-bold leading-tight text-brand-text">
+            {dict.title}
+          </h2>
+        </div>
+        <p className="hidden md:block font-ibm-mono text-xs font-semibold tracking-wider text-brand-muted uppercase">
           {dict.date_range}
         </p>
       </div>
@@ -71,62 +43,34 @@ export default function Work({ dict }: { dict: WorkDict }) {
       {/* Grid */}
       <div className="grid grid-cols-12 gap-8">
         {dict.projects.map((project) => {
-          const layout = PROJECT_LAYOUT[project.id] ?? { col: 'col-span-12', aspect: '16/9' }
+          const layout = PROJECT_LAYOUT[project.id] ?? { col: 'col-span-12', aspect: 'aspect-video' }
           const imgSrc = PROJECT_IMAGES[project.id] ?? ''
 
           return (
             <article
               key={project.id}
               id={`project-${project.id}`}
-              className={`${layout.col} project-card scroll-reveal group`}
-              style={{ cursor: 'pointer', transitionDelay: layout.delay }}
+              className={`${layout.col} project-card brand-card scroll-reveal group cursor-pointer p-6 ${layout.delayClass ?? ''}`}
             >
               {/* Image */}
-              <div
-                style={{
-                  aspectRatio: layout.aspect,
-                  overflow: 'hidden',
-                  backgroundColor: 'var(--color-surface-container)',
-                  marginBottom: '24px',
-                  position: 'relative',
-                }}
-              >
+              <div className={`${layout.aspect} overflow-hidden rounded-2xl bg-surface-container mb-6 relative border border-outline`}>
                 <Image
                   src={imgSrc}
                   alt={project.name}
                   fill
                   loading="lazy"
                   sizes="(max-width: 768px) 100vw, 66vw"
-                  className="project-image"
-                  style={{
-                    objectFit: 'cover',
-                    filter: 'grayscale(1)',
-                    transition: 'filter 0.7s ease, transform 0.7s ease',
-                  }}
-                  onMouseEnter={(e) => {
-                    ;(e.currentTarget as HTMLImageElement).style.filter = 'grayscale(0)'
-                  }}
-                  onMouseLeave={(e) => {
-                    ;(e.currentTarget as HTMLImageElement).style.filter = 'grayscale(1)'
-                  }}
+                  className="project-image object-cover transition-transform duration-700 ease-in-out"
                 />
               </div>
 
               {/* Meta */}
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+              <div className="flex justify-between items-start">
                 <div>
-                  <h3
-                    style={{
-                      fontFamily: 'var(--font-newsreader)',
-                      fontSize: '24px',
-                      fontWeight: 500,
-                      lineHeight: 1.4,
-                      marginBottom: '8px',
-                    }}
-                  >
+                  <h3 className="font-jetbrains text-2xl font-bold leading-snug text-brand-text mb-3">
                     {project.name}
                   </h3>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px' }}>
+                  <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
                       <span key={tag} className="skill-tag">
                         {tag}
@@ -134,36 +78,12 @@ export default function Work({ dict }: { dict: WorkDict }) {
                     ))}
                   </div>
                 </div>
-                <span
-                  className="material-symbols-outlined"
-                  style={{
-                    color: 'var(--color-on-surface-variant)',
-                    flexShrink: 0,
-                    marginLeft: '16px',
-                    opacity: 0,
-                    transition: 'opacity 0.3s',
-                  }}
-                  onMouseEnter={(e) => {
-                    const card = (e.currentTarget as HTMLElement).closest('.project-card')
-                    if (card) {
-                      ;(e.currentTarget as HTMLElement).style.opacity = '1'
-                    }
-                  }}
-                >
+                <span className="material-symbols-outlined text-brand-signal shrink-0 ml-4 text-2xl transition-transform duration-300 ease-in-out group-hover:translate-x-1 group-hover:-translate-y-1">
                   north_east
                 </span>
               </div>
 
-              <p
-                style={{
-                  fontFamily: 'var(--font-hanken)',
-                  fontSize: '16px',
-                  lineHeight: 1.6,
-                  color: 'var(--color-on-surface-variant)',
-                  marginTop: '16px',
-                  maxWidth: '480px',
-                }}
-              >
+              <p className="font-ibm-sans text-base leading-relaxed text-brand-muted mt-4">
                 {project.description}
               </p>
             </article>

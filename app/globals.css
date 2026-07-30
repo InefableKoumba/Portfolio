@@ -5,45 +5,53 @@
    "Luxury through Restraint"
 ═══════════════════════════════════════════════════════ */
 @theme inline {
-  /* ── Colors ── */
-  --color-primary:                  #000000;
-  --color-on-primary:               #ffffff;
-  --color-primary-container:        #1c1b1b;
-  --color-on-primary-container:     #858383;
-  --color-primary-fixed:            #e5e2e1;
+  /* ── Colors (Personal Brand Launch Plan Design System) ── */
+  --color-primary:                  #FFB238;
+  --color-on-primary:               #0E1A2B;
+  --color-primary-container:        #16263D;
+  --color-on-primary-container:     #F5F3EC;
+  --color-primary-fixed:            #FFB238;
 
-  --color-secondary:                #4a6270;
-  --color-on-secondary:             #ffffff;
-  --color-secondary-container:      #cae3f4;
-  --color-on-secondary-container:   #4e6674;
-  --color-secondary-fixed:          #cde6f7;
+  --color-secondary:                #5EEAD4;
+  --color-on-secondary:             #0E1A2B;
+  --color-secondary-container:      #16263D;
+  --color-on-secondary-container:   #5EEAD4;
+  --color-secondary-fixed:          #5EEAD4;
 
-  --color-tertiary:                 #000000;
-  --color-on-tertiary:              #ffffff;
-  --color-tertiary-container:       #1a1c1c;
-  --color-tertiary-fixed:           #e2e2e2;
+  --color-tertiary:                 #FFB238;
+  --color-on-tertiary:              #0E1A2B;
+  --color-tertiary-container:       #16263D;
+  --color-tertiary-fixed:           #FFB238;
 
-  --color-surface:                  #fbf9f9;
-  --color-surface-dim:              #dbdad9;
-  --color-surface-bright:           #fbf9f9;
-  --color-surface-variant:          #e3e2e2;
-  --color-surface-container-lowest: #ffffff;
-  --color-surface-container-low:    #f5f3f3;
-  --color-surface-container:        #efeded;
-  --color-surface-container-high:   #e9e8e7;
-  --color-surface-container-highest:#e3e2e2;
-  --color-surface-tint:             #5f5e5e;
+  --color-surface:                  #0E1A2B;
+  --color-surface-dim:              #0A1320;
+  --color-surface-bright:           #16263D;
+  --color-surface-variant:          #16263D;
+  --color-surface-container-lowest: #0A1320;
+  --color-surface-container-low:    #0E1A2B;
+  --color-surface-container:        #16263D;
+  --color-surface-container-high:   #1E324F;
+  --color-surface-container-highest:#263E60;
+  --color-surface-tint:             #FFB238;
 
-  --color-on-surface:               #1b1c1c;
-  --color-on-surface-variant:       #444748;
-  --color-on-background:            #1b1c1c;
-  --color-background:               #fbf9f9;
+  --color-on-surface:               #F5F3EC;
+  --color-on-surface-variant:       #9FB0C3;
+  --color-on-background:            #F5F3EC;
+  --color-background:               #0E1A2B;
 
-  --color-outline:                  #747878;
-  --color-outline-variant:          #c4c7c7;
+  --color-outline:                  #334866;
+  --color-outline-variant:          #23354E;
 
-  --color-inverse-surface:          #303031;
-  --color-inverse-on-surface:       #f2f0f0;
+  --color-inverse-surface:          #F5F3EC;
+  --color-inverse-on-surface:       #0E1A2B;
+
+  /* ── Brand Specific Colors ── */
+  --color-brand-bg:                 #0E1A2B;
+  --color-brand-card:               #16263D;
+  --color-brand-signal:             #FFB238;
+  --color-brand-data:               #5EEAD4;
+  --color-brand-text:               #F5F3EC;
+  --color-brand-muted:              #9FB0C3;
 
   /* ── Spacing ── */
   --spacing-section-gap:    128px;
@@ -56,21 +64,32 @@
   --width-container-max: 1200px;
 
   /* ── Border radius ── */
-  --radius-DEFAULT: 0.125rem;
-  --radius-lg:      0.25rem;
-  --radius-xl:      0.5rem;
-  --radius-full:    0.75rem;
+  --radius-DEFAULT: 0.5rem;
+  --radius-lg:      0.75rem;
+  --radius-xl:      1rem;
+  --radius-2xl:     1.5rem;
+  --radius-full:    9999px;
 
   /* ── Font families ── */
-  --font-display:          "Newsreader", serif;
-  --font-headline-lg:      "Newsreader", serif;
-  --font-headline-md:      "Newsreader", serif;
-  --font-headline-sm:      "Newsreader", serif;
-  --font-headline-lg-mob:  "Newsreader", serif;
-  --font-body-lg:          "Hanken Grotesk", sans-serif;
-  --font-body-md:          "Hanken Grotesk", sans-serif;
-  --font-label-caps:       "Hanken Grotesk", sans-serif;
-  --font-sans:             "Hanken Grotesk", sans-serif;
+  --font-jetbrains:        var(--font-jetbrains), monospace;
+  --font-ibm-sans:         var(--font-ibm-sans), sans-serif;
+  --font-ibm-mono:         var(--font-ibm-mono), monospace;
+  --font-display:          var(--font-jetbrains), monospace;
+  --font-headline-lg:      var(--font-jetbrains), monospace;
+  --font-headline-md:      var(--font-jetbrains), monospace;
+  --font-headline-sm:      var(--font-jetbrains), monospace;
+  --font-headline-lg-mob:  var(--font-jetbrains), monospace;
+  --font-body-lg:          var(--font-ibm-sans), sans-serif;
+  --font-body-md:          var(--font-ibm-sans), sans-serif;
+  --font-label-caps:       var(--font-ibm-mono), monospace;
+  --font-sans:             var(--font-ibm-sans), sans-serif;
+
+  /* Legacy variable mappings so existing font variables map correctly */
+  --font-newsreader:       var(--font-jetbrains), monospace;
+  --font-hanken:           var(--font-ibm-sans), sans-serif;
+  --font-jetbrains-mono:   var(--font-jetbrains), monospace;
+  --font-ibm-sans-font:    var(--font-ibm-sans), sans-serif;
+  --font-ibm-mono-font:    var(--font-ibm-mono), monospace;
 
   /* ── Font sizes ── */
   --text-display:          72px;
@@ -99,8 +118,8 @@ body {
 }
 
 ::selection {
-  background-color: var(--color-secondary-container);
-  color: var(--color-on-secondary-container);
+  background-color: var(--color-brand-signal);
+  color: var(--color-brand-bg);
 }
 
 /* ── Material Symbols ── */
@@ -113,14 +132,44 @@ body {
   display: inline-flex;
   align-items: center;
   background: var(--color-surface-container);
-  padding: 4px 10px;
+  border: 1px solid var(--color-outline);
+  padding: 6px 12px;
   font-family: var(--font-label-caps);
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 500;
+  letterSpacing: 0.06em;
   text-transform: uppercase;
-  color: var(--color-on-surface-variant);
-  border-radius: var(--radius-DEFAULT);
+  color: var(--color-brand-data);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* ── Signal Trace Line ── */
+.signal-trace {
+  display: inline-block;
+  position: relative;
+}
+.signal-trace::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-brand-signal) 0%, var(--color-brand-data) 100%);
+  margin-top: 4px;
+  border-radius: 2px;
+}
+
+/* ── Card Styling ── */
+.brand-card {
+  background-color: var(--color-brand-card);
+  border: 1px solid var(--color-outline);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.brand-card:hover {
+  border-color: var(--color-brand-signal);
+  box-shadow: 0 8px 30px rgba(255, 178, 56, 0.15);
 }
 
 /* ── Scroll reveal ── */
@@ -137,29 +186,33 @@ body {
 }
 
 /* ── Project card image zoom ── */
+.project-card {
+  border-radius: var(--radius-2xl);
+}
 .project-card:hover .project-image {
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
-/* ── Form inputs (bottom border only) ── */
+/* ── Form inputs (rounded container) ── */
 .form-input {
   width: 100%;
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid var(--color-outline-variant);
-  padding: 14px 0;
+  background: var(--color-surface-container);
+  border: 1px solid var(--color-outline);
+  border-radius: var(--radius-lg);
+  padding: 14px 18px;
   font-family: var(--font-body-lg);
   font-size: var(--text-body-lg);
   line-height: 1.6;
   color: var(--color-on-surface);
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
   outline: none;
 }
 .form-input:focus {
-  border-bottom-color: var(--color-secondary);
+  border-color: var(--color-brand-signal);
+  box-shadow: 0 0 0 3px rgba(255, 178, 56, 0.2);
 }
 .form-input::placeholder {
-  color: var(--color-outline-variant);
+  color: var(--color-on-surface-variant);
 }
 
 /* ── Mobile menu ── */

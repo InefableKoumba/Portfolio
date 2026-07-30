@@ -15,82 +15,26 @@ export default function Footer({ dict, locale }: FooterProps) {
   }
 
   return (
-    <footer
-      style={{
-        width: '100%',
-        paddingTop: '64px',
-        paddingBottom: '64px',
-        borderTop: '1px solid var(--color-outline-variant)',
-        backgroundColor: 'var(--color-surface)',
-      }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          paddingLeft: 'clamp(24px, 6vw, 80px)',
-          paddingRight: 'clamp(24px, 6vw, 80px)',
-          maxWidth: '1200px',
-          margin: '0 auto',
-        }}
-        className="flex-col md:flex-row gap-8"
-      >
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '12px',
-          }}
-          className="items-center md:items-start"
-        >
+    <footer className="w-full py-16 border-t border-outline bg-brand-bg">
+      <div className="flex justify-between items-center px-[clamp(24px,6vw,80px)] max-w-[1440px] mx-auto flex-col md:flex-row gap-8">
+        <div className="flex flex-col gap-3 items-center md:items-start">
           <a
             href="#hero"
-            style={{
-              fontFamily: 'var(--font-newsreader)',
-              fontSize: '24px',
-              fontWeight: 500,
-              color: 'var(--color-primary)',
-              textDecoration: 'none',
-            }}
+            className="font-jetbrains text-2xl font-bold text-brand-signal no-underline"
           >
-            IK<span style={{ color: 'var(--color-secondary)' }}>.</span>
+            IK<span className="text-brand-data">.</span>
           </a>
-          <p
-            style={{
-              fontFamily: 'var(--font-hanken)',
-              fontSize: '12px',
-              fontWeight: 600,
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-              color: 'var(--color-on-surface-variant)',
-              margin: 0,
-            }}
-          >
+          <p className="font-ibm-mono text-xs font-medium tracking-wider uppercase text-brand-muted m-0">
             {dict.copyright}
           </p>
         </div>
 
-        <div
-          style={{
-            display: 'flex',
-            gap: '40px',
-            fontFamily: 'var(--font-hanken)',
-            fontSize: '12px',
-            fontWeight: 600,
-            letterSpacing: '0.1em',
-            textTransform: 'uppercase',
-          }}
-        >
+        <div className="flex gap-10 font-ibm-mono text-xs font-semibold tracking-wider uppercase">
           <a
             href="https://www.linkedin.com/in/inefablekoumba"
             target="_blank"
             rel="noopener"
-            style={{
-              color: 'var(--color-on-surface-variant)',
-              textDecoration: 'underline',
-              textUnderlineOffset: '4px',
-            }}
+            className="text-brand-muted underline underline-offset-4 transition-colors duration-300 hover:text-brand-signal"
           >
             LinkedIn
           </a>
@@ -98,11 +42,7 @@ export default function Footer({ dict, locale }: FooterProps) {
             href="https://github.com/InefableKoumba"
             target="_blank"
             rel="noopener"
-            style={{
-              color: 'var(--color-on-surface-variant)',
-              textDecoration: 'underline',
-              textUnderlineOffset: '4px',
-            }}
+            className="text-brand-muted underline underline-offset-4 transition-colors duration-300 hover:text-brand-signal"
           >
             GitHub
           </a>
@@ -110,11 +50,7 @@ export default function Footer({ dict, locale }: FooterProps) {
             href="/assets/inefable_resume.pdf"
             target="_blank"
             rel="noopener"
-            style={{
-              color: 'var(--color-on-surface-variant)',
-              textDecoration: 'underline',
-              textUnderlineOffset: '4px',
-            }}
+            className="text-brand-muted underline underline-offset-4 transition-colors duration-300 hover:text-brand-signal"
           >
             CV / Résumé
           </a>
@@ -123,24 +59,10 @@ export default function Footer({ dict, locale }: FooterProps) {
         <div>
           <button
             onClick={scrollToTop}
-            style={{
-              background: 'none',
-              border: 'none',
-              cursor: 'pointer',
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '8px',
-              fontFamily: 'var(--font-hanken)',
-              fontSize: '12px',
-              fontWeight: 600,
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-              color: 'var(--color-on-surface-variant)',
-              padding: 0,
-            }}
+            className="bg-transparent border-none cursor-pointer inline-flex items-center gap-2 font-ibm-mono text-xs font-semibold tracking-widest uppercase text-brand-data p-0"
           >
             {dict.back_to_top}
-            <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>
+            <span className="material-symbols-outlined text-[16px]">
               north
             </span>
           </button>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap');
+
+:root{
+  --bg:#0E1A2B;
+  --panel:#16263D;
+  --grid:rgba(255,255,255,0.05);
+  --signal:#FFB238;
+  --data:#5EEAD4;
+  --text:#F5F3EC;
+  --muted:#9FB0C3;
+}
+
+*{box-sizing:border-box; margin:0; padding:0;}
+
+body{
+  width:1080px;
+  height:1080px;
+  background:var(--bg);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size:36px 36px;
+  font-family:'IBM Plex Sans', sans-serif;
+  color:var(--text);
+  overflow:hidden;
+  position:relative;
+}
+
+.frame{
+  position:absolute;
+  inset:56px;
+  display:flex;
+  flex-direction:column;
+}
+
+.header{ display:flex; justify-content:space-between; align-items:flex-start; }
+.eyebrow{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:20px;
+  letter-spacing:3px;
+  color:var(--signal);
+  text-transform:uppercase;
+}
+.brand{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:18px;
+  color:var(--muted);
+  text-align:right;
+  line-height:1.5;
+}
+.brand strong{ color:var(--text); }
+
+.trace{ width:100%; height:34px; margin-top:18px; }
+
+.panel{
+  flex:1;
+  margin-top:28px;
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
+
+.question{
+  font-size:28px;
+  color:var(--muted);
+  line-height:1.5;
+  max-width:900px;
+}
+
+.eq-box{
+  background:var(--panel);
+  border-radius:20px;
+  padding:56px 64px;
+  border:1px solid rgba(255,255,255,0.06);
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:20px;
+}
+
+.eq-label{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:18px;
+  letter-spacing:2px;
+  color:var(--muted);
+  text-transform:uppercase;
+  align-self:flex-start;
+}
+
+.equation{
+  font-family:'JetBrains Mono', monospace;
+  font-size:64px;
+  font-weight:700;
+  color:var(--data);
+  letter-spacing:1px;
+}
+
+.plain{
+  font-size:24px;
+  color:var(--text);
+  line-height:1.6;
+  align-self:flex-start;
+  max-width:820px;
+}
+.plain strong{ color:var(--signal); }
+
+.footer{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:28px;
+}
+.tagline{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:18px;
+  color:var(--muted);
+}
+.mark{ width:14px; height:14px; background:var(--signal); border-radius:3px; }
+.mark-row{ display:flex; align-items:center; gap:12px; }
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+  <div class="header">
+    <div class="eyebrow">MATH IN THE WILD — 001</div>
+    <div class="brand"><strong>Your Name</strong><br>Engineering for the world's hardest constraints</div>
+  </div>
+
+  <svg class="trace" viewBox="0 0 1000 40" preserveAspectRatio="none">
+    <polyline points="0,20 80,20 110,6 140,34 170,20 260,20 290,10 320,30 350,20 1000,20"
+      fill="none" stroke="#FFB238" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+
+  <div class="panel">
+    <div class="question">The question: why does resizing an array feel "free" most of the time, then randomly slow?</div>
+
+    <div class="eq-box">
+      <div class="eq-label">The math</div>
+      <div class="equation">T(n) = O(1) amortized</div>
+      <div class="plain">Replace with your own equation + plain-language line. <strong>Bold</strong> the one phrase you want remembered.</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="mark-row">
+      <div class="mark"></div>
+      <div class="tagline">yourhandle</div>
+    </div>
+    <div class="tagline">Math-to-Code · Post 001</div>
+  </div>
+
+</div>
+
+</body>
+</html>

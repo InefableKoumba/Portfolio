@@ -6,74 +6,34 @@ export default function Skills({ dict }: { dict: SkillsDict }) {
   return (
     <section
       id="skills"
-      style={{
-        paddingLeft: 'clamp(24px, 6vw, 80px)',
-        paddingRight: 'clamp(24px, 6vw, 80px)',
-        paddingTop: '128px',
-        paddingBottom: '128px',
-        maxWidth: '1200px',
-        margin: '0 auto',
-      }}
+      className="px-[clamp(24px,6vw,80px)] py-32 max-w-[1440px] mx-auto"
     >
-      <div
-        className="scroll-reveal"
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'flex-end',
-          marginBottom: '64px',
-          borderBottom: '1px solid var(--color-outline-variant)',
-          paddingBottom: '32px',
-        }}
-      >
-        <h2
-          style={{
-            fontFamily: 'var(--font-newsreader)',
-            fontSize: 'clamp(28px, 4vw, 48px)',
-            fontWeight: 400,
-            lineHeight: 1.2,
-          }}
-        >
-          {dict.title}
-        </h2>
+      <div className="scroll-reveal flex justify-between items-end mb-16 border-b border-outline pb-8">
+        <div>
+          <span className="signal-trace font-ibm-mono text-xs font-semibold tracking-[0.12em] uppercase text-brand-data inline-block mb-3">
+            CAPABILITIES
+          </span>
+          <h2 className="font-jetbrains text-[clamp(28px,4vw,48px)] font-bold leading-tight text-brand-text">
+            {dict.title}
+          </h2>
+        </div>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(1, 1fr)', gap: '32px' }} className="grid-cols-1 md:grid-cols-3">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {dict.categories.map((cat, idx) => (
           <div
             key={cat.id}
-            className="scroll-reveal"
-            style={{
-              padding: '32px',
-              border: '1px solid var(--color-outline-variant)',
-              transitionDelay: `${idx * 100}ms`,
-            }}
+            className={`brand-card scroll-reveal p-9 transition-delay-${idx * 100}`}
           >
-            <span
-              className="material-symbols-outlined"
-              style={{
-                fontSize: '32px',
-                color: 'var(--color-primary)',
-                display: 'block',
-                marginBottom: '24px',
-              }}
-            >
+            <span className="material-symbols-outlined text-4xl text-brand-signal block mb-6">
               {cat.icon}
             </span>
-            <h3
-              style={{
-                fontFamily: 'var(--font-newsreader)',
-                fontSize: '24px',
-                fontWeight: 500,
-                lineHeight: 1.4,
-                marginBottom: '16px',
-              }}
-            >
+            <h3 className="font-jetbrains text-2xl font-bold leading-snug text-brand-text mb-5">
               {cat.title}
             </h3>
 
             {cat.type === 'tags' ? (
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+              <div className="flex flex-wrap gap-2">
                 {cat.items.map((item) => (
                   <span key={item} className="skill-tag">
                     {item}
@@ -81,30 +41,14 @@ export default function Skills({ dict }: { dict: SkillsDict }) {
                 ))}
               </div>
             ) : (
-              <ul style={{ display: 'flex', flexDirection: 'column', gap: '12px', listStyle: 'none', padding: 0, margin: 0 }}>
+              <ul className="flex flex-col gap-3.5 list-none p-0 m-0">
                 {cat.items.map((item) => (
                   <li
                     key={item}
-                    style={{
-                      fontFamily: 'var(--font-hanken)',
-                      fontSize: '16px',
-                      lineHeight: 1.6,
-                      color: 'var(--color-on-surface-variant)',
-                      display: 'flex',
-                      alignItems: 'flex-start',
-                      gap: '8px',
-                    }}
+                    className="font-ibm-sans text-base leading-relaxed text-brand-muted flex items-start gap-2.5"
                   >
-                    <span
-                      className="material-symbols-outlined"
-                      style={{
-                        fontSize: '16px',
-                        color: 'var(--color-secondary)',
-                        flexShrink: 0,
-                        marginTop: '4px',
-                      }}
-                    >
-                      check
+                    <span className="material-symbols-outlined text-[18px] text-brand-data shrink-0 mt-1">
+                      check_circle
                     </span>
                     {item}
                   </li>
@@ -115,33 +59,12 @@ export default function Skills({ dict }: { dict: SkillsDict }) {
         ))}
       </div>
 
-      <div
-        className="scroll-reveal grid grid-cols-1 md:grid-cols-4"
-        style={{
-          marginTop: '48px',
-          paddingTop: '48px',
-          borderTop: '1px solid var(--color-outline-variant)',
-          display: 'grid',
-          gridTemplateColumns: 'repeat(1, 1fr)',
-          gap: '32px',
-          transitionDelay: '300ms',
-        }}
-      >
-        <div>
-          <p
-            style={{
-              fontFamily: 'var(--font-hanken)',
-              fontSize: '12px',
-              fontWeight: 600,
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-              color: 'var(--color-on-surface-variant)',
-              marginBottom: '12px',
-            }}
-          >
+      <div className="scroll-reveal grid grid-cols-1 md:grid-cols-4 gap-6 mt-12 transition-delay-300">
+        <div className="brand-card p-6">
+          <p className="font-ibm-mono text-xs font-semibold tracking-wider uppercase text-brand-signal mb-4">
             {dict.spoken_label}
           </p>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+          <div className="flex flex-wrap gap-2">
             {dict.spoken.map((lang) => (
               <span key={lang} className="skill-tag">
                 {lang}
@@ -149,21 +72,11 @@ export default function Skills({ dict }: { dict: SkillsDict }) {
             ))}
           </div>
         </div>
-        <div className="md:col-span-3">
-          <p
-            style={{
-              fontFamily: 'var(--font-hanken)',
-              fontSize: '12px',
-              fontWeight: 600,
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-              color: 'var(--color-on-surface-variant)',
-              marginBottom: '12px',
-            }}
-          >
+        <div className="md:col-span-3 brand-card p-6">
+          <p className="font-ibm-mono text-xs font-semibold tracking-wider uppercase text-brand-signal mb-4">
             {dict.professional_label}
           </p>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+          <div className="flex flex-wrap gap-2">
             {dict.professional.map((skill) => (
               <span key={skill} className="skill-tag">
                 {skill}

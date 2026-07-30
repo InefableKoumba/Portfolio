@@ -1,60 +1,76 @@
-import type { Metadata } from 'next'
-import { Newsreader, Hanken_Grotesk } from 'next/font/google'
-import '../globals.css'
-import { getDictionary, hasLocale, locales, type Locale } from './dictionaries'
-import { notFound } from 'next/navigation'
+import type { Metadata } from "next";
+import { JetBrains_Mono, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import "../globals.css";
+import { hasLocale, locales } from "./dictionaries";
+import { notFound } from "next/navigation";
 
-const newsreader = Newsreader({
-  subsets: ['latin'],
-  variable: '--font-newsreader',
-  display: 'swap',
-  style: ['normal', 'italic'],
-})
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains",
+  display: "swap",
+  weight: ["400", "500", "700", "800"],
+});
 
-const hankenGrotesk = Hanken_Grotesk({
-  subsets: ['latin'],
-  variable: '--font-hanken',
-  display: 'swap',
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-})
+const ibmPlexSans = IBM_Plex_Sans({
+  subsets: ["latin"],
+  variable: "--font-ibm-sans",
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  variable: "--font-ibm-mono",
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
 
 export async function generateStaticParams() {
-  return locales.map((lang) => ({ lang }))
+  return locales.map((lang) => ({ lang }));
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ lang: string }>
+  params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
-  const { lang } = await params
-  const isFr = lang === 'fr'
+  const { lang } = await params;
+  const isFr = lang === "fr";
   return {
-    title: 'Inefable Koumba — Software Developer & Technical Lead',
+    title: "Inefable Koumba — Software Developer & Technical Lead",
     description: isFr
-      ? 'Inefable Koumba est Développeur Logiciel et Responsable Technique basé à Brazzaville, Congo. Fondateur de FRANZER OÜ. Spécialisé en full-stack, applications mobiles et architecture de plateformes d\'entreprise.'
-      : 'Inefable Koumba is a Software Developer and Technical Lead based in Brazzaville, Congo. Founder of FRANZER OÜ. Specializing in full-stack engineering, mobile apps, and enterprise platform architecture.',
-    keywords: ['Inefable Koumba', 'Software Developer', 'Technical Lead', 'FRANZER OÜ', 'Full-Stack', 'Flutter', 'Go', 'Next.js'],
-    authors: [{ name: 'Inefable Koumba' }],
-    robots: 'index, follow',
-  }
+      ? "Inefable Koumba est Développeur Logiciel et Responsable Technique basé à Brazzaville, Congo. Fondateur de FRANZER OÜ. Spécialisé en full-stack, applications mobiles et architecture de plateformes d'entreprise."
+      : "Inefable Koumba is a Software Developer and Technical Lead based in Brazzaville, Congo. Founder of FRANZER OÜ. Specializing in full-stack engineering, mobile apps, and enterprise platform architecture.",
+    keywords: [
+      "Inefable Koumba",
+      "Software Developer",
+      "Technical Lead",
+      "FRANZER OÜ",
+      "Full-Stack",
+      "Flutter",
+      "Go",
+      "Next.js",
+    ],
+    authors: [{ name: "Inefable Koumba" }],
+    robots: "index, follow",
+  };
 }
 
 export default async function LangLayout({
   children,
   params,
 }: {
-  children: React.ReactNode
-  params: Promise<{ lang: string }>
+  children: React.ReactNode;
+  params: Promise<{ lang: string }>;
 }) {
-  const { lang } = await params
+  const { lang } = await params;
 
-  if (!hasLocale(lang)) notFound()
+  if (!hasLocale(lang)) notFound();
 
   return (
     <html
       lang={lang}
-      className={`${newsreader.variable} ${hankenGrotesk.variable}`}
+      className={`${jetbrainsMono.variable} ${ibmPlexSans.variable} ${ibmPlexMono.variable}`}
     >
       <head>
         <link
@@ -64,5 +80,5 @@ export default async function LangLayout({
       </head>
       <body>{children}</body>
     </html>
-  )
+  );
 }

@@ -29,216 +29,112 @@ export default function Nav({ dict, locale }: NavProps) {
       {/* Scroll progress bar */}
       <div id="scroll-progress" aria-hidden="true" />
 
-      <nav
-        id="main-nav"
-        aria-label="Main navigation"
-        style={{
-          position: 'fixed',
-          top: 0,
-          width: '100%',
-          zIndex: 50,
-          backdropFilter: 'blur(12px)',
-          WebkitBackdropFilter: 'blur(12px)',
-          backgroundColor: 'color-mix(in srgb, var(--color-surface) 80%, transparent)',
-          borderBottom: '1px solid var(--color-outline-variant)',
-          transition: 'padding 0.3s ease',
-        }}
+      <header
+        id="main-nav-wrapper"
+        className="fixed top-5 left-0 right-0 z-50 flex justify-center px-5 pointer-events-none"
       >
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            padding: '24px 80px',
-            maxWidth: '1200px',
-            margin: '0 auto',
-          }}
-          className="px-6 md:px-20 py-6"
+        <nav
+          id="main-nav"
+          aria-label="Main navigation"
+          className="pointer-events-auto w-full max-w-[1440px] backdrop-blur-md bg-[rgba(22,38,61,0.85)] border border-outline rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.4)] transition-all duration-300 ease-in-out"
         >
-          {/* Logo */}
-          <Link
-            href={`/${locale}#hero`}
-            aria-label="Back to top"
-            style={{
-              fontFamily: 'var(--font-newsreader)',
-              fontSize: '24px',
-              fontWeight: 500,
-              lineHeight: 1.4,
-              color: 'var(--color-primary)',
-              textDecoration: 'none',
-            }}
-          >
-            IK<span style={{ color: 'var(--color-secondary)' }}>.</span>
-          </Link>
-
-          {/* Desktop links */}
-          <div className="hidden md:flex items-center gap-10">
-            <div style={{ display: 'flex', gap: '32px' }}>
-              {links.map((l) => (
-                <a
-                  key={l.id}
-                  id={l.id}
-                  href={l.href}
-                  style={{
-                    fontFamily: 'var(--font-hanken)',
-                    fontSize: '16px',
-                    color: 'var(--color-on-surface-variant)',
-                    textDecoration: 'none',
-                    transition: 'color 0.3s',
-                  }}
-                  onMouseEnter={(e) =>
-                    ((e.target as HTMLElement).style.color = 'var(--color-primary)')
-                  }
-                  onMouseLeave={(e) =>
-                    ((e.target as HTMLElement).style.color = 'var(--color-on-surface-variant)')
-                  }
-                >
-                  {l.label}
-                </a>
-              ))}
-            </div>
-
-            {/* Language switcher */}
+          <div className="flex justify-between items-center px-7 py-3">
+            {/* Logo */}
             <Link
-              href={`/${otherLocale}`}
-              style={{
-                fontFamily: 'var(--font-hanken)',
-                fontSize: '12px',
-                fontWeight: 600,
-                letterSpacing: '0.1em',
-                textTransform: 'uppercase',
-                color: 'var(--color-secondary)',
-                border: '1px solid var(--color-secondary)',
-                padding: '4px 10px',
-                textDecoration: 'none',
-                borderRadius: '2px',
-                transition: 'all 0.25s',
-              }}
-              title={`Switch to ${otherLocale === 'fr' ? 'Français' : 'English'}`}
+              href={`/${locale}#hero`}
+              aria-label="Back to top"
+              className="font-jetbrains text-xl font-bold leading-relaxed text-brand-signal no-underline tracking-tight"
             >
-              {otherLocale.toUpperCase()}
+              IK<span className="text-brand-data">.</span>
             </Link>
 
-            {/* Résumé */}
-            <a
-              href="/assets/inefable_resume.pdf"
-              target="_blank"
-              rel="noopener"
-              style={{
-                fontFamily: 'var(--font-hanken)',
-                fontSize: '12px',
-                fontWeight: 600,
-                letterSpacing: '0.1em',
-                textTransform: 'uppercase',
-                border: '1px solid var(--color-primary)',
-                padding: '8px 24px',
-                color: 'var(--color-primary)',
-                textDecoration: 'none',
-                transition: 'all 0.3s',
-              }}
-              onMouseEnter={(e) => {
-                const el = e.currentTarget
-                el.style.backgroundColor = 'var(--color-primary)'
-                el.style.color = 'var(--color-on-primary)'
-              }}
-              onMouseLeave={(e) => {
-                const el = e.currentTarget
-                el.style.backgroundColor = 'transparent'
-                el.style.color = 'var(--color-primary)'
-              }}
-            >
-              {dict.resume}
-            </a>
-          </div>
+            {/* Desktop links */}
+            <div className="hidden md:flex items-center gap-8">
+              <div className="flex gap-7">
+                {links.map((l) => (
+                  <a
+                    key={l.id}
+                    id={l.id}
+                    href={l.href}
+                    className="font-ibm-sans text-[15px] font-medium text-brand-text no-underline hover:text-brand-signal transition-colors duration-300 ease-in-out"
+                  >
+                    {l.label}
+                  </a>
+                ))}
+              </div>
 
-          {/* Mobile hamburger */}
-          <button
-            id="mobile-toggle"
-            className="md:hidden"
-            aria-expanded={menuOpen}
-            aria-controls="mobile-menu"
-            aria-label={dict.toggle_menu}
-            onClick={() => setMenuOpen((o) => !o)}
-            style={{
-              background: 'none',
-              border: 'none',
-              cursor: 'pointer',
-              color: 'var(--color-primary)',
-              padding: '8px',
-            }}
-          >
-            <span className="material-symbols-outlined">
-              {menuOpen ? 'close' : 'menu'}
-            </span>
-          </button>
-        </div>
-
-        {/* Mobile menu */}
-        <div id="mobile-menu" className={menuOpen ? 'open' : ''}>
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '16px',
-              padding: '16px 24px 24px',
-              borderTop: '1px solid var(--color-outline-variant)',
-            }}
-          >
-            {links.map((l) => (
-              <a
-                key={l.id}
-                href={l.href}
-                onClick={close}
-                style={{
-                  fontFamily: 'var(--font-hanken)',
-                  fontSize: '16px',
-                  color: 'var(--color-on-surface-variant)',
-                  textDecoration: 'none',
-                }}
-              >
-                {l.label}
-              </a>
-            ))}
-            <div style={{ display: 'flex', gap: '12px', marginTop: '4px', flexWrap: 'wrap' }}>
+              {/* Language switcher */}
               <Link
                 href={`/${otherLocale}`}
-                onClick={close}
-                style={{
-                  fontFamily: 'var(--font-hanken)',
-                  fontSize: '12px',
-                  fontWeight: 600,
-                  letterSpacing: '0.1em',
-                  textTransform: 'uppercase',
-                  color: 'var(--color-secondary)',
-                  border: '1px solid var(--color-secondary)',
-                  padding: '4px 10px',
-                  textDecoration: 'none',
-                }}
+                className="font-ibm-mono text-xs font-semibold tracking-widest uppercase text-brand-data border border-brand-data px-3 py-1 no-underline rounded-full hover:bg-brand-data hover:text-brand-bg transition-all duration-250 ease-in-out"
+                title={`Switch to ${otherLocale === 'fr' ? 'Français' : 'English'}`}
               >
                 {otherLocale.toUpperCase()}
               </Link>
+
+              {/* Résumé button */}
               <a
                 href="/assets/inefable_resume.pdf"
                 target="_blank"
                 rel="noopener"
-                style={{
-                  fontFamily: 'var(--font-hanken)',
-                  fontSize: '12px',
-                  fontWeight: 600,
-                  letterSpacing: '0.1em',
-                  textTransform: 'uppercase',
-                  border: '1px solid var(--color-primary)',
-                  padding: '4px 24px',
-                  color: 'var(--color-primary)',
-                  textDecoration: 'none',
-                }}
+                className="font-ibm-mono text-xs font-semibold tracking-wider uppercase bg-brand-signal rounded-full px-5 py-2 text-brand-bg no-underline hover:bg-brand-data hover:text-brand-bg transition-all duration-300 ease-in-out shadow-[0_2px_10px_rgba(255,178,56,0.2)]"
               >
                 {dict.resume}
               </a>
             </div>
+
+            {/* Mobile hamburger */}
+            <button
+              id="mobile-toggle"
+              className="md:hidden bg-transparent border-none cursor-pointer text-brand-signal p-2 flex items-center"
+              aria-expanded={menuOpen}
+              aria-controls="mobile-menu"
+              aria-label={dict.toggle_menu}
+              onClick={() => setMenuOpen((o) => !o)}
+            >
+              <span className="material-symbols-outlined">
+                {menuOpen ? 'close' : 'menu'}
+              </span>
+            </button>
           </div>
-        </div>
-      </nav>
+
+          {/* Mobile menu */}
+          <div
+            id="mobile-menu"
+            className={`${menuOpen ? 'open' : ''} rounded-b-3xl`}
+          >
+            <div className="flex flex-col gap-4 px-6 pt-4 pb-6 border-t border-outline">
+              {links.map((l) => (
+                <a
+                  key={l.id}
+                  href={l.href}
+                  onClick={close}
+                  className="font-ibm-sans text-base text-brand-text no-underline"
+                >
+                  {l.label}
+                </a>
+              ))}
+              <div className="flex gap-3 mt-1 flex-wrap">
+                <Link
+                  href={`/${otherLocale}`}
+                  onClick={close}
+                  className="font-ibm-mono text-xs font-semibold tracking-widest uppercase text-brand-data border border-brand-data px-4 py-1.5 rounded-full no-underline"
+                >
+                  {otherLocale.toUpperCase()}
+                </Link>
+                <a
+                  href="/assets/inefable_resume.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  className="font-ibm-mono text-xs font-semibold tracking-wider uppercase bg-brand-signal px-5 py-1.5 rounded-full text-brand-bg no-underline"
+                >
+                  {dict.resume}
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
     </>
   )
 }

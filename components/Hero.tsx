@@ -9,139 +9,39 @@ export default function Hero({ dict }: { dict: HeroDict }) {
   return (
     <section
       id="hero"
-      style={{
-        paddingTop: '160px',
-        paddingBottom: '128px',
-        paddingLeft: 'clamp(24px, 6vw, 80px)',
-        paddingRight: 'clamp(24px, 6vw, 80px)',
-        maxWidth: '1200px',
-        margin: '0 auto',
-      }}
+      className="pt-40 pb-32 px-[clamp(24px,6vw,80px)] max-w-[1440px] mx-auto"
     >
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(12, 1fr)',
-          gap: '32px',
-          alignItems: 'end',
-        }}
-        className="grid-cols-1 md:grid-cols-12"
-      >
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
         {/* ── Text ── */}
-        <div style={{ gridColumn: 'span 8' }} className="col-span-12 md:col-span-8">
-          <span
-            className="scroll-reveal"
-            style={{
-              fontFamily: 'var(--font-hanken)',
-              fontSize: '12px',
-              fontWeight: 600,
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-              color: 'var(--color-secondary)',
-              display: 'block',
-              marginBottom: '24px',
-            }}
-          >
+        <div className="col-span-12 md:col-span-8">
+          <span className="scroll-reveal signal-trace font-ibm-mono text-[13px] font-semibold tracking-[0.12em] uppercase text-brand-data inline-block mb-6">
             {dict.location}
           </span>
 
-          <h1
-            className="scroll-reveal"
-            style={{
-              fontFamily: 'var(--font-newsreader)',
-              fontSize: 'clamp(32px, 5vw, 72px)',
-              lineHeight: 1.1,
-              letterSpacing: '-0.02em',
-              fontWeight: 300,
-              marginBottom: '32px',
-              transitionDelay: '100ms',
-            }}
-          >
+          <h1 className="scroll-reveal font-jetbrains text-[clamp(36px,5.5vw,76px)] leading-[1.15] tracking-tight font-bold mb-8 text-brand-text transition-delay-100">
             {dict.headline_1}{' '}
-            <em style={{ fontStyle: 'italic' }}>{dict.headline_italic}</em>{' '}
+            <em className="not-italic italic text-brand-signal">{dict.headline_italic}</em>{' '}
             {dict.headline_2}
           </h1>
 
-          <p
-            className="scroll-reveal"
-            style={{
-              fontFamily: 'var(--font-hanken)',
-              fontSize: '18px',
-              lineHeight: 1.6,
-              color: 'var(--color-on-surface-variant)',
-              maxWidth: '560px',
-              marginBottom: '48px',
-              transitionDelay: '200ms',
-            }}
-          >
+          <p className="scroll-reveal font-ibm-sans text-[19px] leading-relaxed text-brand-muted max-w-[640px] mb-12 transition-delay-200">
             {dict.bio}
           </p>
 
-          <div
-            className="scroll-reveal"
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: '24px',
-              transitionDelay: '300ms',
-            }}
-          >
+          <div className="scroll-reveal flex flex-wrap gap-5 transition-delay-300">
             <a
               href="#work"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                fontFamily: 'var(--font-hanken)',
-                fontSize: '12px',
-                fontWeight: 600,
-                letterSpacing: '0.1em',
-                textTransform: 'uppercase',
-                borderBottom: '1px solid var(--color-primary)',
-                paddingBottom: '4px',
-                color: 'var(--color-primary)',
-                textDecoration: 'none',
-                transition: 'color 0.3s, border-color 0.3s',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.color = 'var(--color-secondary)'
-                e.currentTarget.style.borderColor = 'var(--color-secondary)'
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.color = 'var(--color-primary)'
-                e.currentTarget.style.borderColor = 'var(--color-primary)'
-              }}
+              className="inline-flex items-center gap-2.5 font-ibm-mono text-[13px] font-semibold tracking-wider uppercase bg-brand-signal text-brand-bg px-7 py-3.5 rounded-full no-underline transition-all duration-300 ease-in-out shadow-[0_4px_14px_rgba(255,178,56,0.25)] hover:bg-brand-data hover:-translate-y-0.5"
             >
               {dict.cta_work}
-              <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>
+              <span className="material-symbols-outlined text-[18px]">
                 arrow_forward
               </span>
             </a>
 
             <a
               href="#contact"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                fontFamily: 'var(--font-hanken)',
-                fontSize: '12px',
-                fontWeight: 600,
-                letterSpacing: '0.1em',
-                textTransform: 'uppercase',
-                border: '1px solid var(--color-primary)',
-                padding: '12px 24px',
-                color: 'var(--color-primary)',
-                textDecoration: 'none',
-                transition: 'background 0.3s, color 0.3s',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = 'var(--color-primary)'
-                e.currentTarget.style.color = 'var(--color-on-primary)'
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = 'transparent'
-                e.currentTarget.style.color = 'var(--color-primary)'
-              }}
+              className="inline-flex items-center font-ibm-mono text-[13px] font-semibold tracking-wider uppercase border border-outline rounded-full px-7 py-3.5 text-brand-text bg-brand-card no-underline transition-all duration-300 ease-in-out hover:border-brand-signal hover:text-brand-signal"
             >
               {dict.cta_contact}
             </a>
@@ -149,57 +49,19 @@ export default function Hero({ dict }: { dict: HeroDict }) {
         </div>
 
         {/* ── Portrait ── */}
-        <div
-          className="scroll-reveal col-span-12 md:col-span-4"
-          style={{
-            display: 'flex',
-            justifyContent: 'flex-end',
-            transitionDelay: '150ms',
-          }}
-        >
-          <div style={{ position: 'relative' }}>
-            <div
-              style={{
-                width: 'clamp(200px, 25vw, 288px)',
-                height: 'clamp(200px, 25vw, 288px)',
-                overflow: 'hidden',
-                backgroundColor: 'var(--color-surface-container)',
-                borderRadius: '12px',
-                position: 'relative',
-              }}
-            >
+        <div className="scroll-reveal col-span-12 md:col-span-4 flex justify-end transition-delay-150">
+          <div className="relative">
+            <div className="w-[clamp(240px,28vw,320px)] h-[clamp(240px,28vw,320px)] overflow-hidden bg-brand-card border-2 border-outline rounded-3xl relative shadow-[0_12px_40px_rgba(0,0,0,0.4)]">
               <Image
                 src="/assets/img/kims.png"
                 alt="Inefable Koumba — portrait"
                 fill
                 priority
-                style={{
-                  objectFit: 'cover',
-                  objectPosition: 'top',
-                  filter: 'grayscale(1) brightness(0.9) contrast(1.1)',
-                }}
+                className="object-cover object-top"
               />
             </div>
-            <div
-              style={{
-                position: 'absolute',
-                bottom: '16px',
-                left: '16px',
-                backgroundColor: 'rgba(0,0,0,0.88)',
-                backdropFilter: 'blur(4px)',
-                padding: '8px 16px',
-              }}
-            >
-              <span
-                style={{
-                  fontFamily: 'var(--font-hanken)',
-                  fontSize: '12px',
-                  fontWeight: 600,
-                  letterSpacing: '0.1em',
-                  color: '#ffffff',
-                  textTransform: 'uppercase',
-                }}
-              >
+            <div className="absolute bottom-4 left-4 bg-[rgba(14,26,43,0.9)] border border-outline rounded-xl backdrop-blur-md px-4 py-2">
+              <span className="font-ibm-mono text-xs font-semibold tracking-widest text-brand-signal uppercase">
                 {dict.badge}
               </span>
             </div>
@@ -208,41 +70,16 @@ export default function Hero({ dict }: { dict: HeroDict }) {
       </div>
 
       {/* ── Stats strip ── */}
-      <div
-        className="scroll-reveal grid grid-cols-2 md:grid-cols-4"
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(2, 1fr)',
-          gap: '32px',
-          marginTop: '80px',
-          paddingTop: '48px',
-          borderTop: '1px solid var(--color-outline-variant)',
-          transitionDelay: '400ms',
-        }}
-      >
+      <div className="scroll-reveal grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 transition-delay-400">
         {dict.stats.map((s) => (
-          <div key={s.label}>
-            <p
-              style={{
-                fontFamily: 'var(--font-newsreader)',
-                fontSize: '32px',
-                lineHeight: 1.3,
-                fontWeight: 400,
-                marginBottom: '4px',
-              }}
-            >
+          <div
+            key={s.label}
+            className="brand-card px-7 py-6"
+          >
+            <p className="font-jetbrains text-[36px] leading-snug font-bold text-brand-signal mb-1.5">
               {s.value}
             </p>
-            <p
-              style={{
-                fontFamily: 'var(--font-hanken)',
-                fontSize: '12px',
-                fontWeight: 600,
-                letterSpacing: '0.1em',
-                textTransform: 'uppercase',
-                color: 'var(--color-on-surface-variant)',
-              }}
-            >
+            <p className="font-ibm-mono text-xs font-semibold tracking-wider uppercase text-brand-muted">
               {s.label}
             </p>
           </div>

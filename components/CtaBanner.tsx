@@ -1,93 +1,33 @@
-'use client'
+"use client";
 
-import type { Dictionary } from '@/app/[lang]/dictionaries'
+import type { Dictionary } from "@/app/[lang]/dictionaries";
 
-type CtaDict = Dictionary['cta']
+type CtaDict = Dictionary["cta"];
 
 export default function CtaBanner({ dict }: { dict: CtaDict }) {
   return (
-    <section
-      style={{
-        backgroundColor: 'var(--color-surface-container)',
-        paddingTop: '128px',
-        paddingBottom: '128px',
-        paddingLeft: 'clamp(24px, 6vw, 80px)',
-        paddingRight: 'clamp(24px, 6vw, 80px)',
-      }}
-    >
-      <div
-        className="scroll-reveal"
-        style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
-          textAlign: 'center',
-        }}
-      >
-        <span
-          style={{
-            fontFamily: 'var(--font-hanken)',
-            fontSize: '12px',
-            fontWeight: 600,
-            letterSpacing: '0.15em',
-            textTransform: 'uppercase',
-            color: 'var(--color-secondary)',
-            marginBottom: '24px',
-            display: 'block',
-          }}
-        >
+    <section className="bg-brand-bg py-16 px-[clamp(24px,6vw,80px)]">
+      <div className="scroll-reveal brand-card max-w-[1440px] mx-auto py-20 px-8 text-center">
+        <span className="signal-trace font-ibm-mono text-xs font-semibold tracking-[0.15em] uppercase text-brand-data mb-6 inline-block">
           {dict.label}
         </span>
-        <h2
-          style={{
-            fontFamily: 'var(--font-newsreader)',
-            fontSize: 'clamp(32px, 5vw, 48px)',
-            lineHeight: 1.2,
-            fontWeight: 400,
-            marginBottom: '24px',
-          }}
-        >
-          {dict.headline_1}{' '}
-          <em style={{ fontStyle: 'italic' }}>{dict.headline_italic}</em>{' '}
+        <h2 className="font-jetbrains text-[clamp(32px,5vw,48px)] leading-tight font-bold text-brand-text mb-6">
+          {dict.headline_1}{" "}
+          <em className="not-italic italic text-brand-signal">
+            {dict.headline_italic}
+          </em>{" "}
           {dict.headline_2}
         </h2>
-        <p
-          style={{
-            fontFamily: 'var(--font-hanken)',
-            fontSize: '18px',
-            lineHeight: 1.6,
-            color: 'var(--color-on-surface-variant)',
-            maxWidth: '560px',
-            margin: '0 auto 48px',
-          }}
-        >
+        <p className="font-ibm-sans text-lg leading-relaxed text-brand-muted max-w-[640px] mx-auto mb-12">
           {dict.body}
         </p>
         <a
-          href="mailto:inefablekoumba@proton.me"
-          style={{
-            fontFamily: 'var(--font-newsreader)',
-            fontSize: 'clamp(24px, 4vw, 32px)',
-            fontWeight: 400,
-            lineHeight: 1.3,
-            color: 'var(--color-primary)',
-            textDecoration: 'none',
-            borderBottom: '2px solid var(--color-primary)',
-            paddingBottom: '8px',
-            transition: 'color 0.3s, border-color 0.3s',
-            display: 'inline-block',
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.color = 'var(--color-secondary)'
-            e.currentTarget.style.borderColor = 'var(--color-secondary)'
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.color = 'var(--color-primary)'
-            e.currentTarget.style.borderColor = 'var(--color-primary)'
-          }}
+          href="mailto:hello@inefable.dev"
+          className="font-jetbrains text-[clamp(22px,3.5vw,32px)] font-bold leading-snug text-brand-signal no-underline border-b-2 border-brand-signal pb-2 transition-all duration-300 ease-in-out inline-block hover:text-brand-data hover:border-brand-data"
         >
-          inefablekoumba@proton.me
+          hello@inefable.dev
         </a>
       </div>
     </section>
-  )
+  );
 }
