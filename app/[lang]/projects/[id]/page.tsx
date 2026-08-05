@@ -81,6 +81,28 @@ export default async function ProjectDetailPage({
                 {isFr ? 'Visiter le site en direct' : 'Visit Live Site'}
               </a>
             )}
+            {project.links.appStore && (
+              <a
+                href={project.links.appStore}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 font-ibm-mono text-xs font-semibold uppercase border border-outline text-brand-text px-6 py-3.5 rounded-xl bg-brand-card hover:border-brand-signal hover:text-brand-signal transition-all"
+              >
+                <span className="material-symbols-outlined text-[20px]">phone_iphone</span>
+                App Store
+              </a>
+            )}
+            {project.links.playStore && (
+              <a
+                href={project.links.playStore}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 font-ibm-mono text-xs font-semibold uppercase border border-outline text-brand-text px-6 py-3.5 rounded-xl bg-brand-card hover:border-brand-data hover:text-brand-data transition-all"
+              >
+                <span className="material-symbols-outlined text-[20px]">android</span>
+                Google Play Store
+              </a>
+            )}
             {project.links.github && (
               <a
                 href={project.links.github}

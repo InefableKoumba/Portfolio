@@ -1,90 +1,84 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import type { Dictionary } from '@/app/[lang]/dictionaries'
+import Image from "next/image";
+import type { Dictionary } from "@/app/[lang]/dictionaries";
 
-type HeroDict = Dictionary['hero']
+type HeroDict = Dictionary["hero"];
 
 export default function Hero({ dict }: { dict: HeroDict }) {
   return (
     <section
       id="hero"
-      className="pt-40 pb-32 px-[clamp(24px,6vw,80px)] max-w-[1440px] mx-auto"
+      className="relative pt-32 pb-24 px-[clamp(24px,6vw,80px)] max-w-[1440px] mx-auto overflow-hidden"
     >
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-        {/* ── Text ── */}
-        <div className="col-span-12 md:col-span-8">
-          <span className="scroll-reveal signal-trace font-ibm-mono text-[13px] font-semibold tracking-[0.12em] uppercase text-brand-data inline-block mb-6">
-            {dict.location}
-          </span>
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        {/* ── Left Content Block ── */}
+        <div className="lg:col-span-7 z-10">
+          {/* Subheader / Kicker Badge */}
+          <div className="scroll-reveal flex items-center gap-2.5 mb-8">
+            <span className="w-2.5 h-2.5 rounded-sm bg-brand-signal inline-block shadow-[0_0_12px_#FFB238]"></span>
+            <span className="font-ibm-mono text-xs font-semibold tracking-[0.25em] uppercase text-brand-text/90">
+              PORTFOLIO
+            </span>
+          </div>
 
-          <h1 className="scroll-reveal font-jetbrains text-[clamp(36px,5.5vw,76px)] leading-[1.15] tracking-tight font-bold mb-8 text-brand-text transition-delay-100">
-            {dict.headline_1}{' '}
-            <em className="not-italic italic text-brand-signal">{dict.headline_italic}</em>{' '}
-            {dict.headline_2}
+          {/* Large Impact Name Title */}
+          <h1 className="scroll-reveal font-jetbrains text-[clamp(40px,6vw,86px)] leading-[0.95] tracking-tight font-extrabold mb-6 text-brand-text transition-delay-100">
+            Inefable
+            <span className="block text-brand-signal mt-1">KOUMBA</span>
           </h1>
 
-          <p className="scroll-reveal font-ibm-sans text-[19px] leading-relaxed text-brand-muted max-w-[640px] mb-12 transition-delay-200">
-            {dict.bio}
+          {/* Subtitle Role Accent */}
+          <h2 className="scroll-reveal font-ibm-mono text-[clamp(16px,2vw,22px)] font-bold tracking-wider uppercase text-brand-data mb-8 transition-delay-150">
+            {(dict as { role?: string }).role ??
+              "SOFTWARE DEVELOPER / TECHNICAL LEAD"}
+          </h2>
+
+          {/* Concise Impact Description */}
+          <p className="scroll-reveal font-ibm-sans text-[clamp(17px,1.8vw,22px)] leading-relaxed text-brand-muted/90 max-w-[580px] mb-10 transition-delay-200">
+            {(dict as { tagline?: string }).tagline ??
+              "I design, build and scale digital products that solve real problems and create measurable impact."}
           </p>
 
-          <div className="scroll-reveal flex flex-wrap gap-5 transition-delay-300">
+          {/* Orange Accent Trace Line & Action CTA */}
+          <div className="scroll-reveal flex items-center gap-6 transition-delay-300">
+            <span className="w-12 h-[3px] bg-brand-signal rounded-full"></span>
             <a
               href="#work"
-              className="inline-flex items-center gap-2.5 font-ibm-mono text-[13px] font-semibold tracking-wider uppercase bg-brand-signal text-brand-bg px-7 py-3.5 rounded-full no-underline transition-all duration-300 ease-in-out shadow-[0_4px_14px_rgba(255,178,56,0.25)] hover:bg-brand-data hover:-translate-y-0.5"
+              className="inline-flex items-center gap-3 font-ibm-mono text-xs font-bold tracking-widest uppercase bg-brand-signal hover:bg-brand-signal/80 text-brand-bg px-8 py-4 rounded-xl transition-all duration-300"
             >
               {dict.cta_work}
               <span className="material-symbols-outlined text-[18px]">
                 arrow_forward
               </span>
             </a>
-
-            <a
-              href="#contact"
-              className="inline-flex items-center font-ibm-mono text-[13px] font-semibold tracking-wider uppercase border border-outline rounded-full px-7 py-3.5 text-brand-text bg-brand-card no-underline transition-all duration-300 ease-in-out hover:border-brand-signal hover:text-brand-signal"
-            >
-              {dict.cta_contact}
-            </a>
           </div>
         </div>
 
-        {/* ── Portrait ── */}
-        <div className="scroll-reveal col-span-12 md:col-span-4 flex justify-end transition-delay-150">
-          <div className="relative">
-            <div className="w-[clamp(240px,28vw,320px)] h-[clamp(240px,28vw,320px)] overflow-hidden bg-brand-card border-2 border-outline rounded-3xl relative shadow-[0_12px_40px_rgba(0,0,0,0.4)]">
+        {/* ── Right Hero Visual Block (Spotlight Backdrop + Cutout Portrait) ── */}
+        <div className="relative scroll-reveal lg:col-span-5 flex justify-center lg:justify-end transition-delay-200 relative">
+          <div className="relative w-full max-w-[460px] aspect-[4/5] flex items-center justify-center">
+            {/* Glowing Radial Halo Rings matching reference design (Teal & Amber Glowing Arcs) */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-brand-data/25 via-transparent to-brand-signal/25 blur-3xl scale-95 opacity-80 pointer-events-none"></div>
+
+            {/* Circular Backdrop Arc Graphic */}
+
+            {/* Cutout Portrait Container with Bottom Smooth Fade Gradient */}
+            <div className="absolute -bottom-40 w-[140%] h-[120%] flex items-center justify-center z-10 pointer-events-none overflow-hidden">
               <Image
                 src="/assets/img/kims.png"
                 alt="Inefable Koumba — portrait"
                 fill
                 priority
-                className="object-cover object-top"
+                sizes="(max-width: 1024px) 90vw, 660px"
+                className="object-contain object-bottom filter contrast-[1.05]"
               />
-            </div>
-            <div className="absolute bottom-4 left-4 bg-[rgba(14,26,43,0.9)] border border-outline rounded-xl backdrop-blur-md px-4 py-2">
-              <span className="font-ibm-mono text-xs font-semibold tracking-widest text-brand-signal uppercase">
-                {dict.badge}
-              </span>
+              {/* Bottom Background Transition Overlay Mask */}
+              {/* <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[var(--color-brand-bg)] via-[var(--color-brand-bg)]/80 to-transparent z-20 pointer-events-none"></div> */}
             </div>
           </div>
         </div>
       </div>
-
-      {/* ── Stats strip ── */}
-      <div className="scroll-reveal grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 transition-delay-400">
-        {dict.stats.map((s) => (
-          <div
-            key={s.label}
-            className="brand-card px-7 py-6"
-          >
-            <p className="font-jetbrains text-[36px] leading-snug font-bold text-brand-signal mb-1.5">
-              {s.value}
-            </p>
-            <p className="font-ibm-mono text-xs font-semibold tracking-wider uppercase text-brand-muted">
-              {s.label}
-            </p>
-          </div>
-        ))}
-      </div>
     </section>
-  )
+  );
 }

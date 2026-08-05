@@ -1,19 +1,19 @@
-'use client'
+"use client";
 
-import type { Dictionary } from '@/app/[lang]/dictionaries'
-import { FaLinkedin, FaGithub, FaFacebook, FaXTwitter } from 'react-icons/fa6'
+import type { Dictionary } from "@/app/[lang]/dictionaries";
+import { FaLinkedin, FaGithub, FaFacebook, FaXTwitter } from "react-icons/fa6";
 
-type FooterDict = Dictionary['footer']
+type FooterDict = Dictionary["footer"];
 
 interface FooterProps {
-  dict: FooterDict
-  locale: 'en' | 'fr'
+  dict: FooterDict;
+  locale: "en" | "fr";
 }
 
 export default function Footer({ dict, locale }: FooterProps) {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <footer className="w-full py-16 border-t border-outline bg-brand-bg">
@@ -62,7 +62,7 @@ export default function Footer({ dict, locale }: FooterProps) {
             <FaFacebook className="w-4 h-4" />
           </a>
           <a
-            href="https://x.com/inefablekoumba"
+            href="https://x.com/inefable027"
             target="_blank"
             rel="noopener"
             aria-label="Twitter / X"
@@ -79,12 +79,10 @@ export default function Footer({ dict, locale }: FooterProps) {
             className="bg-transparent border-none cursor-pointer inline-flex items-center gap-2 font-ibm-mono text-xs font-semibold tracking-widest uppercase text-brand-data p-0"
           >
             {dict.back_to_top}
-            <span className="material-symbols-outlined text-[16px]">
-              north
-            </span>
+            <span className="material-symbols-outlined text-[16px]">north</span>
           </button>
         </div>
       </div>
     </footer>
-  )
+  );
 }

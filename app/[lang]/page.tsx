@@ -32,8 +32,7 @@ export default async function Page({
         <About dict={dict.about} />
         <Work dict={dict.work} locale={locale} />
         <Skills dict={dict.skills} />
-        <CtaBanner dict={dict.cta} />
-        <Contact dict={dict.contact} />
+        <CtaBanner dict={dict.cta} contactDict={dict.contact} />
       </main>
       <Footer dict={dict.footer} locale={locale} />
     </>

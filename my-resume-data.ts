@@ -49,11 +49,6 @@ const cv_data = {
             "A multi-service discovery and concierge booking platform for premium events, dining, and transport, utilizing high-density layouts and custom card components.",
         },
         {
-          name: "RhoPay",
-          description:
-            "A mobile payment and remittance application designed to issue cards, allow account top-ups, and integrate local mobile money payment methods like MTN MoMo and Airtel Money.",
-        },
-        {
           name: "Jecontribue",
           description:
             "A collaboration or application framework developed under the Franzer engineering ecosystem.",
@@ -62,13 +57,13 @@ const cv_data = {
     },
     {
       company: "MAZALA-FIRM",
-      role: "CEO & Développeur Fullstack",
+      role: "Founder & Solo Software Engineer",
       location: "Brazzaville, Congo",
       start_date: "January 2024",
       end_date: "Present",
       highlights: [
-        "Développé plusieurs applications web et mobile (Android & iOS) en utilisant React Native, React, Nextjs, Flutter, Golang, Redis, MongoDB, PostgresQL, etc.",
-        "Coordination et gestion d'une équipe de développeurs et designers sur divers projets.",
+        "Architected, designed, and engineered proprietary web and mobile applications (Android & iOS) from initial UI/UX concepts to full-stack code implementation.",
+        "Managed end-to-end cloud infrastructure, CI/CD pipelines, database administration, and server deployments (Golang, React Native, Next.js, Flutter, PostgreSQL, Redis, Docker).",
       ],
     },
     {

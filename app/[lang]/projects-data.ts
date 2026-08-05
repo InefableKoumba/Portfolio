@@ -69,8 +69,7 @@ export const PROJECTS_DATA: Record<string, ProjectDetail> = {
     },
     platforms: ["Web"],
     tags: ["FINTECH", "CROWDFUNDING", "NEXT.JS 16", "NESTJS"],
-    image:
-      "https://images.unsplash.com/photo-1532629345422-7515fe9d1633?w=900&q=80&auto=format&fit=crop",
+    image: "/assets/img/jecontribue.webp",
     techStack: {
       frontend: [
         "Next.js 16 (App Router)",
@@ -237,8 +236,7 @@ export const PROJECTS_DATA: Record<string, ProjectDetail> = {
     },
     platforms: ["Web", "Android", "iOS"],
     tags: ["OMNICHANNEL AI", "HYBRID RAG", "GOLANG GATEWAY", "PGVECTOR"],
-    image:
-      "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=900&q=80&auto=format&fit=crop",
+    image: "/assets/img/voltenai.webp",
     techStack: {
       frontend: [
         "Next.js 16 (App Router)",
@@ -421,8 +419,10 @@ export const PROJECTS_DATA: Record<string, ProjectDetail> = {
       }
     ],
     links: {
-      live: "",
-      github: ""
+      live: "https://voltenai.com",
+      github: "",
+      appStore: "https://apps.apple.com/cg/app/volten-ai/id6769339873",
+      playStore: "https://play.google.com/store/apps/details?id=org.franzer.voltenai&hl=fr"
     }
   },
   koyeba: {
@@ -446,8 +446,7 @@ export const PROJECTS_DATA: Record<string, ProjectDetail> = {
     },
     platforms: ["Android", "iOS"],
     tags: ["MULTIPLAYER GAMING", "EXPO SDK 57", "CLOUDFLARE EDGE", "TURSO"],
-    image:
-      "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=900&q=80&auto=format&fit=crop",
+    image: "/assets/img/koyeba.webp",
     techStack: {
       frontend: [
         "React Native (0.86)",
@@ -580,7 +579,7 @@ export const PROJECTS_DATA: Record<string, ProjectDetail> = {
       },
     ],
     links: {
-      live: "",
+      live: "https://koyeba.inefable.dev",
       github: "",
     },
   },
@@ -605,8 +604,7 @@ export const PROJECTS_DATA: Record<string, ProjectDetail> = {
     },
     platforms: ["Android", "iOS", "Web"],
     tags: ["EVENT TICKETING", "REACT NATIVE", "NESTJS FASTIFY", "MOBILE MONEY"],
-    image:
-      "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80&auto=format&fit=crop",
+    image: "/assets/img/rhodium.webp",
     techStack: {
       frontend: [
         "React Native 0.83",
@@ -741,9 +739,11 @@ export const PROJECTS_DATA: Record<string, ProjectDetail> = {
     links: {
       live: "",
       github: "",
+      appStore: "https://apps.apple.com/cg/app/rhodium/id6680194933",
+      playStore: "https://play.google.com/store/apps/details?id=com.franzer.rhodium&hl=fr"
     },
   },
-  rhopay: {
+  rhopay_removed: {
     id: "rhopay",
     name: "RhoPay",
     tagline: {
@@ -836,8 +836,7 @@ export const PROJECTS_DATA: Record<string, ProjectDetail> = {
     },
     platforms: ["Web"],
     tags: ["WEB", "CMS", "LUXEMBOURG"],
-    image:
-      "https://images.unsplash.com/photo-1467293622093-9f15c96be70f?w=900&q=80&auto=format&fit=crop",
+    image: "/assets/img/sandweiler.webp",
     techStack: {
       frontend: ["JavaScript", "HTML5", "CSS3", "TailwindCSS"],
       backend: ["CMS Backend", "PHP/Node"],
@@ -904,8 +903,7 @@ export const PROJECTS_DATA: Record<string, ProjectDetail> = {
     },
     platforms: ["Web"],
     tags: ["WEB", "CMS", "LUXEMBOURG"],
-    image:
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=900&q=80&auto=format&fit=crop",
+    image: "/assets/img/berdorf.webp",
     techStack: {
       frontend: ["JavaScript", "HTML5", "CSS3"],
       backend: ["CMS Backend"],
@@ -972,8 +970,7 @@ export const PROJECTS_DATA: Record<string, ProjectDetail> = {
     },
     platforms: ["Web"],
     tags: ["PAYLOAD CMS 3", "NEXT.JS 16", "TURSO SQLITE", "CLOUDFLARE R2"],
-    image:
-      "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=900&q=80&auto=format&fit=crop",
+    image: "/assets/img/rhoptique.webp",
     techStack: {
       frontend: [
         "Next.js 16",
@@ -1108,8 +1105,187 @@ export const PROJECTS_DATA: Record<string, ProjectDetail> = {
       },
     ],
     links: {
+      live: "https://rhoptique.com/",
+      github: "",
+    },
+  },
+  mybgr: {
+    id: "mybgr",
+    name: "MyBGR",
+    tagline: {
+      fr: "Assistant mobile IA pour la création de CV professionnels, l'optimisation ATS et la conversion de documents.",
+      en: "AI-powered mobile career ecosystem for CV building, ATS optimization, OCR parsing, and PDF exports.",
+    },
+    overview: {
+      fr: "MyBGR est une plateforme mobile complète combinant React Native et NestJS, conçue pour aider les chercheurs d'emploi à générer des CV conformes aux normes ATS, analyser leurs documents existants via OCR + IA, et exporter des rendus PDF haute résolution.",
+      en: "MyBGR is a full-stack mobile ecosystem combining React Native and NestJS designed to empower job seekers with ATS-compliant CV generation, OCR document parsing, AI scoring, and headless server-side PDF exports.",
+    },
+    problem: {
+      fr: "Les candidats manquent souvent d'outils modernes pour formater leurs CV aux normes ATS internationales, extraire facilement les données de leurs anciens documents papier/PDF, et payer des abonnements avec des moyens de paiement locaux (Mobile Money).",
+      en: "Job seekers struggle with ATS resume formatting, lack tools to extract structured data from old printed or PDF resumes, and face payment barriers when localized Mobile Money options are absent.",
+    },
+    solution: {
+      fr: "Une application mobile fluide (Expo) associée à une architecture microservices NestJS/Fastify intégrant la reconnaissance optique de caractères (Google Cloud Vision), la synthèse IA (Gemini), le rendu PDF headless (Puppeteer) et les paiements PawaPay/Revolut.",
+      en: "A seamless Expo mobile app paired with a NestJS/Fastify backend featuring OCR (Google Cloud Vision), AI synthesis (Gemini), headless PDF rendering (Puppeteer), and dual PawaPay/Revolut payments.",
+    },
+    platforms: ["Android", "iOS", "Web"],
+    tags: ["REACT NATIVE EXPO", "NESTJS BUN", "GOOGLE VISION OCR", "PAWAPAY"],
+    image: "/assets/img/mybgr.webp",
+    techStack: {
+      frontend: [
+        "React Native 0.85",
+        "Expo SDK 56",
+        "Expo Router",
+        "TypeScript",
+        "TanStack React Query v5",
+        "Zustand",
+        "Uniwind / TailwindCSS",
+        "React Native MMKV",
+      ],
+      backend: [
+        "NestJS 11",
+        "Fastify Engine",
+        "Bun Runtime",
+        "Prisma 7 ORM",
+        "BullMQ Queue",
+        "TypeScript",
+      ],
+      database: ["PostgreSQL 16", "Redis"],
+      devops: ["Docker", "AWS S3", "Headless Puppeteer Chromium Cluster"],
+      integrations: [
+        "Google Cloud Vision API",
+        "Vercel AI SDK (Gemini & OpenAI)",
+        "PawaPay Mobile Money",
+        "Revolut Merchant API",
+        "Google & Apple OAuth",
+      ],
+    },
+    architectureHighlights: [
+      {
+        title: {
+          fr: "Moteur de rendu PDF Headless haute performance (Puppeteer + BullMQ)",
+          en: "High-Performance Headless HTML-to-PDF Engine (Puppeteer + BullMQ)",
+        },
+        description: {
+          fr: "Génération côté serveur de CV PDF vectoriels et multi-thèmes via des instances Chromium headless gérées de manière asynchrone par BullMQ et stockées sur AWS S3.",
+          en: "Asynchronous server-side rendering of vector multi-theme PDF resumes using headless Chromium instances managed by BullMQ and stored on AWS S3.",
+        },
+      },
+      {
+        title: {
+          fr: "Pipeline d'extraction de documents hybride (OCR Vision + IA Structurée)",
+          en: "Hybrid Document Extraction Pipeline (Vision OCR + Structured AI)",
+        },
+        description: {
+          fr: "Extraction du texte brut des CV numérisés via Google Cloud Vision API puis structuration intelligente en schémas Zod grâce à Gemini.",
+          en: "Raw text extraction from scanned resumes using Google Cloud Vision API followed by intelligent Zod schema structuring powered by Gemini.",
+        },
+      },
+      {
+        title: {
+          fr: "Moteur de paiement hybride (Mobile Money PawaPay + Revolut)",
+          en: "Hybrid Payment Engine (PawaPay Mobile Money + Revolut)",
+        },
+        description: {
+          fr: "Réconciliation automatique et sécurisée des paiements par carte bancaire et Mobile Money avec validation idempotente par webhooks.",
+          en: "Secure automated reconciliation of card and Mobile Money transactions using idempotent webhook validation.",
+        },
+      },
+      {
+        title: {
+          fr: "Expérience Hors-ligne sans latence (MMKV + React Query)",
+          en: "Zero-Latency Offline Experience (MMKV + React Query)",
+        },
+        description: {
+          fr: "Stockage local ultra-rapide des brouillons de CV avec synchronisation automatique lors du rétablissement de la connexion réseau.",
+          en: "Ultra-fast local caching of CV drafts with automatic background sync upon re-establishing network connection.",
+        },
+      },
+    ],
+    features: [
+      {
+        title: {
+          fr: "Éditeur de CV Interactif & Thèmes Dynamiques",
+          en: "Interactive CV Builder & Real-time Themes",
+        },
+        description: {
+          fr: "Création et modification de CV avec réordonnancement dynamique des sections et prévisualisation en temps réel.",
+          en: "Resume creation and editing with dynamic section reordering and real-time template previews.",
+        },
+        tech: ["Expo Router", "Zustand", "React Native Reanimated", "Uniwind"],
+      },
+      {
+        title: {
+          fr: "Analyseur de CV IA & Score ATS",
+          en: "AI Resume Optimizer & ATS Scoring",
+        },
+        description: {
+          fr: "Évaluation de la conformité ATS, calcul du score global, détection de mots-clés et recommandations d'amélioration.",
+          en: "ATS compliance evaluation, overall score computation, keyword analysis, and actionable AI suggestions.",
+        },
+        tech: ["Vercel AI SDK", "NestJS", "Zod", "Prisma 7"],
+      },
+      {
+        title: {
+          fr: "Scanner et Numériseur de Documents PDF/Images",
+          en: "Smart PDF & Document Scanner (OCR)",
+        },
+        description: {
+          fr: "Conversion automatique de fichiers PDF ou photos de CV en profils numériques entièrement éditables.",
+          en: "Automatic conversion of PDF files or CV photos into fully editable digital profiles.",
+        },
+        tech: ["Google Cloud Vision API", "Fastify Multipart", "AWS S3"],
+      },
+      {
+        title: {
+          fr: "Exportation Multi-Formats & Liens de Partage",
+          en: "Headless Multi-Format Exporter & Sharing",
+        },
+        description: {
+          fr: "Génération de fichiers PDF haute résolution et de liens web partagables directement depuis le mobile.",
+          en: "Generation of high-resolution PDF files and shareable web links directly from mobile.",
+        },
+        tech: ["Puppeteer", "BullMQ", "AWS S3 Presigned URLs"],
+      },
+      {
+        title: {
+          fr: "Abonnements et Paiements Multi-Canaux",
+          en: "Localized Subscriptions & Access Control",
+        },
+        description: {
+          fr: "Achat de pass journalier, accès hebdomadaire et mensuel via Mobile Money et cartes bancaires.",
+          en: "Purchase of day passes, weekly access, and monthly subscriptions via Mobile Money and credit cards.",
+        },
+        tech: ["PawaPay API", "Revolut API", "Fastify Webhooks"],
+      },
+    ],
+    metrics: [
+      {
+        value: "< 1.2s",
+        label: {
+          fr: "Temps moyen de génération PDF via Puppeteer",
+          en: "Average PDF compilation latency via Puppeteer",
+        },
+      },
+      {
+        value: "98.4%",
+        label: {
+          fr: "Précision d'extraction OCR des CV numérisés",
+          en: "OCR data extraction accuracy from scanned CVs",
+        },
+      },
+      {
+        value: "100%",
+        label: {
+          fr: "Couverture des paiements (Mobile Money & Carte)",
+          en: "Payment gateway coverage (Mobile Money & Cards)",
+        },
+      },
+    ],
+    links: {
       live: "",
       github: "",
+      playStore: "https://play.google.com/store/apps/details?id=com.franzer.mybgr&hl=fr",
     },
   },
 };

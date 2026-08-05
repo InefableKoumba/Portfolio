@@ -120,7 +120,7 @@ export default function Contact({ dict }: { dict: ContactDict }) {
               </li>
               <li>
                 <a
-                  href="https://x.com/inefablekoumba"
+                  href="https://x.com/inefable027"
                   target="_blank"
                   rel="noopener"
                   aria-label="Twitter / X Profile"

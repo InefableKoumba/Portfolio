@@ -4,18 +4,20 @@
     "about": "À propos",
     "skills": "Compétences",
     "contact": "Contact",
-    "resume": "CV",
+    "resume": "Voir mon CV",
     "toggle_menu": "Ouvrir le menu de navigation"
   },
   "hero": {
     "location": "BRAZZAVILLE, CONGO — DISPONIBLE À DISTANCE",
+    "role": "DÉVELOPPEUR LOGICIEL / LEAD TECHNIQUE",
+    "tagline": "Je conçois, construis et déploie des produits numériques qui résolvent de vrais problèmes et créent un impact mesurable.",
     "headline_1": "Construire des logiciels robustes avec une",
     "headline_italic": "clarté architecturale",
     "headline_2": ".",
     "bio": "Je suis Inefable Koumba — Développeur Logiciel & Responsable Technique. Développeur principal chez FRANZER OÜ. Je conçois et réalise des plateformes full-stack, des applications mobiles et des solutions de paiement haute performance qui soutiennent de véritables entreprises dans les marchés émergents et au-delà.",
     "cta_work": "Voir mes projets",
     "cta_contact": "Me contacter",
-    "badge": "FRANZER OÜ / LEAD DEVELOPER",
+    "badge": "ARCHITECTE LOGICIEL & SYSTÈMES SCALABLES",
     "stats": [
       { "value": "4+", "label": "Ans d'expérience" },
       { "value": "10+", "label": "Projets livrés" },
@@ -25,58 +27,71 @@
   },
   "work": {
     "title": "Projets Sélectionnés",
-    "date_range": "2022 — 2025",
+    "date_range": "2022 — 2026",
     "projects": [
       {
         "id": "jecontribue-crowdfunding",
         "name": "JE CONTRIBUE",
+        "platforms": ["Web"],
         "tags": ["FINTECH", "CROWDFUNDING", "NEXT.JS 16", "NESTJS"],
-        "description": "Plateforme de collecte de fonds multi-tenants avec orchestration de paiements en temps réel et Mobile Money.",
+        "description": "Plateforme de collecte de dons solidaire permettant à la diaspora d'envoyer facilement des fonds et d'aider des projets humanitaires en Afrique via carte bancaire et Mobile Money.",
         "link": "https://jecontribue.com"
       },
       {
         "id": "volten",
         "name": "Volten AI",
-        "tags": ["ORCHESTRATION IA", "MICROSERVICES", "AUTOMATISATION"],
-        "description": "Plateforme d'orchestration IA omnicanale et d'automatisation des flux. Construite sur une architecture microservices pour une livraison d'IA d'entreprise scalable et fiable."
+        "platforms": ["Web", "Android", "iOS"],
+        "tags": ["ASSISTANT IA", "AUTOMATISATION", "SUPPORT CLIENT"],
+        "description": "Assistant IA d'entreprise qui répond automatiquement aux clients sur WhatsApp, Instagram et Facebook 24/7 avec passage fluide vers un agent humain en cas de besoin.",
+        "link": "https://voltenai.com"
       },
       {
         "id": "koyeba",
         "name": "Koyeba",
-        "tags": ["MULTIPLAYER GAMING", "EXPO SDK 57", "CLOUDFLARE EDGE", "TURSO"],
-        "description": "Plateforme mobile de quiz multijoueur en temps réel, tournois et défis avec synchronisation Edge Cloudflare et fonctionnement offline-first."
+        "platforms": ["Android", "iOS"],
+        "tags": ["JEU MOBILE", "QUIZ TEMPS RÉEL", "TOURNOIS"],
+        "description": "Jeu mobile de quiz et de défis en direct où les joueurs s'affrontent en temps réel dans des tournois de culture générale, jouable même hors-ligne.",
+        "link": "https://koyeba.inefable.dev"
       },
       {
         "id": "rhodium",
         "name": "Rhodium",
-        "tags": ["PLATEFORME CONCIERGERIE", "NEXT.JS"],
-        "description": "Découverte multi-services & réservation conciergerie pour événements premium, restauration et transport."
-      },
-      {
-        "id": "rhopay",
-        "name": "RhoPay",
-        "tags": ["FINTECH", "MOBILE", "FLUTTER"],
-        "description": "Paiement mobile & transfert d'argent avec intégration MTN MoMo et Airtel Money, émission de cartes et rechargement de compte."
+        "platforms": ["Android", "iOS", "Web"],
+        "tags": ["BILLETTERIE", "ÉVÉNEMENTS", "MOBILE MONEY"],
+        "description": "Application mobile de billetterie événementielle pour découvrir les meilleurs événements, acheter ses billets via Mobile Money et les faire scanner à l'entrée.",
+        "link": "https://apps.apple.com/cg/app/rhodium/id6680194933"
       },
       {
         "id": "sandweiler",
         "name": "Sandweiler.lu",
-        "tags": ["WEB", "CMS", "LUXEMBOURG"],
-        "description": "Site municipal officiel haute-fidélité pour la Commune de Sandweiler (Luxembourg) avec intégration CMS transparente et services citoyens.",
+        "platforms": ["Web"],
+        "tags": ["PORTAIL MUNICIPAL", "SERVICES CITOYENS", "LUXEMBOURG"],
+        "description": "Site web officiel de la commune de Sandweiler offrant aux habitants un accès rapide aux démarches administratives, actualités et avis officiels.",
         "link": "https://sandweiler.lu/"
       },
       {
         "id": "berdorf",
         "name": "Berdorf.lu",
-        "tags": ["WEB", "CMS", "LUXEMBOURG"],
-        "description": "Site municipal officiel pour la Commune de Berdorf (Luxembourg) offrant une expérience numérique fluide et une gestion de contenu dynamique.",
+        "platforms": ["Web"],
+        "tags": ["PORTAIL MUNICIPAL", "SERVICES CITOYENS", "LUXEMBOURG"],
+        "description": "Site officiel de la commune de Berdorf facilitant l'accès aux services municipaux, informations locales et démarches administratives pour les citoyens.",
         "link": "https://berdorf.lu/"
       },
       {
         "id": "rhoptique",
         "name": "Belle Vue RHOP",
-        "tags": ["PAYLOAD CMS 3", "NEXT.JS 16", "TURSO SQLITE", "CLOUDFLARE R2"],
-        "description": "Plateforme web et CMS headless pour cabinet d'optique à Brazzaville, consultations visuelles et catalogue de lunetterie."
+        "platforms": ["Web"],
+        "tags": ["CABINET OPTIQUE", "PRISE DE RENDEZ-VOUS", "CATALOGUE"],
+        "description": "Site web pour cabinet d'optique permettant de réserver des examens de la vue en ligne, consulter le catalogue de montures et verres, et contacter directement les opticiens.",
+        "link": "https://rhoptique.com/"
+      },
+      {
+        "id": "mybgr",
+        "name": "MyBGR",
+        "platforms": ["Android", "iOS", "Web"],
+        "tags": ["ASSISTANT CV IA", "SCANNER OCR", "EXPORT PDF"],
+        "description": "Application mobile intelligente pour créer un CV professionnel aux normes des recruteurs, scanner un ancien document et générer des téléchargements PDF instantanés.",
+        "link": "https://play.google.com/store/apps/details?id=com.franzer.mybgr&hl=fr"
       }
     ]
   },
@@ -117,8 +132,8 @@
       {
         "period": "JANV. 2024 — PRÉSENT",
         "company": "MAZALA-FIRM",
-        "role": "PDG & Développeur Full-Stack",
-        "desc": "Direction du développement web & mobile sur React, Next.js et Flutter tout en gérant des équipes de développement transfonctionnelles.",
+        "role": "Fondateur & Développeur Indépendant",
+        "desc": "Conception, développement complet et gestion d'infrastructure en solo pour des applications web et mobiles propriétaires (UI/UX design, frontend, backend & DevOps).",
         "current": true
       },
       {
@@ -138,39 +153,107 @@
     ]
   },
   "skills": {
-    "title": "Compétences Clés",
+    "title": "Compétences & Stack Technique",
     "categories": [
       {
         "id": "languages",
         "icon": "code",
         "title": "Langages & Frameworks",
         "type": "tags",
-        "items": ["Golang", "JavaScript", "Python", "Dart", "HTML / CSS", "React Native", "Next.js", "NestJS", "Flutter", "Expo", "Bun", "SAS"]
+        "items": [
+          "Golang",
+          "TypeScript",
+          "JavaScript",
+          "Python",
+          "Dart",
+          "HTML5 / CSS3",
+          "Next.js 16",
+          "React 19",
+          "React Native (Expo 57)",
+          "NestJS 11",
+          "Fastify",
+          "Hono",
+          "Flutter",
+          "TailwindCSS v4",
+          "Unistyles 3",
+          "React Native Skia",
+          "Payload CMS 3",
+          "Bun",
+          "RxJS"
+        ]
       },
       {
         "id": "infra",
         "icon": "storage",
         "title": "Données & Infrastructure",
         "type": "tags",
-        "items": ["PostgreSQL", "pgvector", "MongoDB", "Redis", "MySQL", "Turso", "AWS", "Cloudflare", "IONOS", "Render", "CI / CD", "Git"]
+        "items": [
+          "PostgreSQL 16",
+          "pgvector (HNSW / GIN)",
+          "Prisma 7 ORM",
+          "Drizzle ORM",
+          "Turso (libSQL)",
+          "Expo SQLite",
+          "Redis (ioredis)",
+          "MongoDB",
+          "Cloudflare Workers",
+          "Cloudflare Durable Objects",
+          "Cloudflare R2",
+          "AWS S3 / EC2",
+          "Docker / Compose",
+          "RabbitMQ",
+          "Puppeteer Cluster",
+          "CI / CD",
+          "Git"
+        ]
+      },
+      {
+        "id": "integrations",
+        "icon": "hub",
+        "title": "Intégrations & IA & APIs",
+        "type": "tags",
+        "items": [
+          "Meta Graph API (WhatsApp, IG, FB)",
+          "Revolut Merchant API",
+          "PawaPay (MTN MoMo & Airtel Money)",
+          "Vodacom M-Pesa",
+          "Google Cloud Vision OCR",
+          "Vercel AI SDK (Gemini & OpenAI)",
+          "Anthropic Claude API",
+          "Socket.IO / WebSockets",
+          "Firecrawl Parser",
+          "Firebase Admin / Push",
+          "OAuth (Google & Apple)"
+        ]
       },
       {
         "id": "certs",
         "icon": "verified",
-        "title": "Certifications",
+        "title": "Certifications & Diplômes",
         "type": "list",
         "items": [
+          "B.Sc. Software Development — BYU Idaho (En cours)",
+          "Licence Administration Systèmes & Réseaux — ESGAE",
           "SAS Certified Associate : Modélisation avec SAS Visual Statistics",
           "SAS Certified Specialist : Analyse Visuelle avec SAS Viya",
-          "SAS Certified Associate : Fondamentaux de la Programmation SAS 9.4",
-          "Nanodegree Développement Web Full-Stack"
+          "SAS Certified Associate : Fondamentaux SAS 9.4",
+          "Full-Stack Web Development Nanodegree"
         ]
       }
     ],
     "spoken_label": "LANGUES PARLÉES",
     "spoken": ["Français — Natif", "Anglais — Avancé"],
     "professional_label": "COMPÉTENCES PROFESSIONNELLES",
-    "professional": ["Leadership d'équipe", "Gestion du temps", "Pensée critique", "Résolution de problèmes", "Rédaction professionnelle", "Analyse de données", "Visualisation de données", "Linux / Bash", "Algorithmes & Structures de données"]
+    "professional": [
+      "Architecture Microservices & Edge",
+      "Conception RAG & Vérité IA",
+      "Orchestration de Paiements Mobile Money",
+      "Direction Technique & Leadership",
+      "UI/UX Design Systèmes (60 FPS)",
+      "Optimisation des Performances & Latence",
+      "Résolution de Problèmes Complexe",
+      "Linux / Bash Systems Administration"
+    ]
   },
   "cta": {
     "label": "OUVERT AUX OPPORTUNITÉS",
@@ -193,7 +276,13 @@
     "email_label": "ADRESSE EMAIL",
     "email_placeholder": "email@exemple.com",
     "subject_label": "SUJET",
-    "subjects": ["Renseignement général", "Collaboration sur un projet", "Responsable Technique / Conseil", "Opportunité d'emploi", "Médias & Presse"],
+    "subjects": [
+      "Renseignement général",
+      "Collaboration sur un projet",
+      "Responsable Technique / Conseil",
+      "Opportunité d'emploi",
+      "Médias & Presse"
+    ],
     "message_label": "VOTRE MESSAGE",
     "message_placeholder": "Décrivez brièvement votre projet ou idée",
     "submit": "ENVOYER",

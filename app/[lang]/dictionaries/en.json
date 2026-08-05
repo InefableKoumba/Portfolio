@@ -4,18 +4,20 @@
     "about": "About",
     "skills": "Skills",
     "contact": "Contact",
-    "resume": "Résumé",
+    "resume": "See My CV",
     "toggle_menu": "Toggle navigation menu"
   },
   "hero": {
     "location": "BRAZZAVILLE, CONGO — OPEN TO REMOTE",
+    "role": "SOFTWARE DEVELOPER / TECHNICAL LEAD",
+    "tagline": "I design, build and scale digital products that solve real problems and create measurable impact.",
     "headline_1": "Building robust software with",
     "headline_italic": "architectural",
     "headline_2": "clarity.",
     "bio": "I'm Inefable Koumba — Software Developer & Technical Lead. Lead Developer at FRANZER OÜ. I architect and engineer full-stack platforms, mobile applications, and high-throughput payment solutions that power real businesses in emerging markets and beyond.",
     "cta_work": "View My Work",
     "cta_contact": "Get in Touch",
-    "badge": "FRANZER OÜ / LEAD DEVELOPER",
+    "badge": "SCALABLE SYSTEMS & SOFTWARE ARCHITECT",
     "stats": [
       { "value": "4+", "label": "Years of Experience" },
       { "value": "10+", "label": "Projects Delivered" },
@@ -25,58 +27,71 @@
   },
   "work": {
     "title": "Selected Work",
-    "date_range": "2022 — 2025",
+    "date_range": "2022 — 2026",
     "projects": [
       {
         "id": "jecontribue-crowdfunding",
         "name": "JE CONTRIBUE",
-        "tags": ["FINTECH", "CROWDFUNDING", "NEXT.JS 16", "NESTJS"],
-        "description": "Multi-tenant crowdfunding platform powering seamless cross-border donations with real-time payment orchestration.",
+        "platforms": ["Web"],
+        "tags": ["CROWDFUNDING", "DONATIONS", "MOBILE MONEY"],
+        "description": "Humanitarian donation platform connecting European diaspora donors with beneficiaries in Africa via credit card and Mobile Money payments.",
         "link": "https://jecontribue.com"
       },
       {
         "id": "volten",
         "name": "Volten AI",
-        "tags": ["AI ORCHESTRATION", "MICROSERVICES", "WORKFLOW AUTOMATION"],
-        "description": "Omnichannel AI orchestration and workflow automation platform. Built on a microservices architecture for scalable, reliable enterprise AI delivery."
+        "platforms": ["Web", "Android", "iOS"],
+        "tags": ["AI ASSISTANT", "AUTOMATION", "CUSTOMER SUPPORT"],
+        "description": "24/7 AI customer service assistant that automatically handles inquiries on WhatsApp, Instagram, and Facebook with real-time human agent handover.",
+        "link": "https://voltenai.com"
       },
       {
         "id": "koyeba",
         "name": "Koyeba",
-        "tags": ["MULTIPLAYER GAMING", "EXPO SDK 57", "CLOUDFLARE EDGE", "TURSO"],
-        "description": "Real-time multiplayer trivia, gaming tournaments, and brain-battles mobile platform backed by Cloudflare Edge & offline-first SQLite."
+        "platforms": ["Android", "iOS"],
+        "tags": ["MOBILE GAME", "REALTIME TRIVIA", "TOURNAMENTS"],
+        "description": "Real-time multiplayer trivia game app where players compete live in trivia battles and tournaments, fully playable even offline.",
+        "link": "https://koyeba.inefable.dev"
       },
       {
         "id": "rhodium",
         "name": "Rhodium",
-        "tags": ["CONCIERGE PLATFORM", "NEXT.JS"],
-        "description": "Multi-service discovery & concierge booking for premium events, dining, and transport."
-      },
-      {
-        "id": "rhopay",
-        "name": "RhoPay",
-        "tags": ["FINTECH", "MOBILE", "FLUTTER"],
-        "description": "Mobile payment & remittance with MTN MoMo and Airtel Money integration, card issuance, and account top-up."
+        "platforms": ["Android", "iOS", "Web"],
+        "tags": ["EVENT TICKETING", "MOBILE MONEY", "DISCOVERY"],
+        "description": "Event discovery & ticketing mobile app to find upcoming concerts and events, buy passes instantly with Mobile Money, and scan entry QR codes.",
+        "link": "https://apps.apple.com/cg/app/rhodium/id6680194933"
       },
       {
         "id": "sandweiler",
         "name": "Sandweiler.lu",
-        "tags": ["WEB", "CMS", "LUXEMBOURG"],
-        "description": "High-fidelity official municipal platform for the Municipality of Sandweiler (Luxembourg) featuring seamless CMS integration and citizen services.",
+        "platforms": ["Web"],
+        "tags": ["MUNICIPAL PORTAL", "CITIZEN SERVICES", "LUXEMBOURG"],
+        "description": "Official municipal web application for the Municipality of Sandweiler (Luxembourg) providing citizens quick access to news, services, and public notices.",
         "link": "https://sandweiler.lu/"
       },
       {
         "id": "berdorf",
         "name": "Berdorf.lu",
-        "tags": ["WEB", "CMS", "LUXEMBOURG"],
-        "description": "Official municipal web application for the Municipality of Berdorf (Luxembourg) delivering dynamic content management and fluid citizen UX.",
+        "platforms": ["Web"],
+        "tags": ["MUNICIPAL PORTAL", "CITIZEN SERVICES", "LUXEMBOURG"],
+        "description": "Official municipal platform for the Municipality of Berdorf (Luxembourg) offering streamlined digital services and official community updates.",
         "link": "https://berdorf.lu/"
       },
       {
         "id": "rhoptique",
         "name": "Belle Vue RHOP",
-        "tags": ["PAYLOAD CMS 3", "NEXT.JS 16", "TURSO SQLITE", "CLOUDFLARE R2"],
-        "description": "Full-stack web platform & headless CMS for optical clinic management, vision consultations, and eyewear e-commerce in Brazzaville."
+        "platforms": ["Web"],
+        "tags": ["OPTICAL CLINIC", "EYE EXAM BOOKING", "CATALOG"],
+        "description": "Optical clinic website for scheduling online vision consultations, browsing eyewear frames and lenses, and booking eye screening appointments.",
+        "link": "https://rhoptique.com/"
+      },
+      {
+        "id": "mybgr",
+        "name": "MyBGR",
+        "platforms": ["Android", "iOS", "Web"],
+        "tags": ["AI CV BUILDER", "OCR SCANNER", "PDF EXPORT"],
+        "description": "Smart AI mobile career assistant to build ATS-compliant resumes, scan existing paper or PDF CVs, and export instant recruiter-ready PDF downloads.",
+        "link": "https://play.google.com/store/apps/details?id=com.franzer.mybgr&hl=fr"
       }
     ]
   },
@@ -117,8 +132,8 @@
       {
         "period": "JAN 2024 — PRESENT",
         "company": "MAZALA-FIRM",
-        "role": "CEO & Full-Stack Developer",
-        "desc": "Led web & mobile development across React, Next.js, and Flutter while managing cross-functional dev teams.",
+        "role": "Founder & Solo Software Engineer",
+        "desc": "End-to-end design, full-stack development, and cloud infrastructure management for proprietary mobile and web applications (UI/UX, frontend, backend & DevOps).",
         "current": true
       },
       {
@@ -138,28 +153,87 @@
     ]
   },
   "skills": {
-    "title": "Core Competencies",
+    "title": "Skills & Tech Stack",
     "categories": [
       {
         "id": "languages",
         "icon": "code",
         "title": "Languages & Frameworks",
         "type": "tags",
-        "items": ["Golang", "JavaScript", "Python", "Dart", "HTML / CSS", "React Native", "Next.js", "NestJS", "Flutter", "Expo", "Bun", "SAS"]
+        "items": [
+          "Golang",
+          "TypeScript",
+          "JavaScript",
+          "Python",
+          "Dart",
+          "HTML5 / CSS3",
+          "Next.js 16",
+          "React 19",
+          "React Native (Expo 57)",
+          "NestJS 11",
+          "Fastify",
+          "Hono",
+          "Flutter",
+          "TailwindCSS v4",
+          "Unistyles 3",
+          "React Native Skia",
+          "Payload CMS 3",
+          "Bun",
+          "RxJS"
+        ]
       },
       {
         "id": "infra",
         "icon": "storage",
         "title": "Data & Infrastructure",
         "type": "tags",
-        "items": ["PostgreSQL", "pgvector", "MongoDB", "Redis", "MySQL", "Turso", "AWS", "Cloudflare", "IONOS", "Render", "CI / CD", "Git"]
+        "items": [
+          "PostgreSQL 16",
+          "pgvector (HNSW / GIN)",
+          "Prisma 7 ORM",
+          "Drizzle ORM",
+          "Turso (libSQL)",
+          "Expo SQLite",
+          "Redis (ioredis)",
+          "MongoDB",
+          "Cloudflare Workers",
+          "Cloudflare Durable Objects",
+          "Cloudflare R2",
+          "AWS S3 / EC2",
+          "Docker / Compose",
+          "RabbitMQ",
+          "Puppeteer Cluster",
+          "CI / CD",
+          "Git"
+        ]
+      },
+      {
+        "id": "integrations",
+        "icon": "hub",
+        "title": "Integrations & AI & APIs",
+        "type": "tags",
+        "items": [
+          "Meta Graph API (WhatsApp, IG, FB)",
+          "Revolut Merchant API",
+          "PawaPay (MTN MoMo & Airtel Money)",
+          "Vodacom M-Pesa",
+          "Google Cloud Vision OCR",
+          "Vercel AI SDK (Gemini & OpenAI)",
+          "Anthropic Claude API",
+          "Socket.IO / WebSockets",
+          "Firecrawl Parser",
+          "Firebase Admin / Push",
+          "OAuth (Google & Apple)"
+        ]
       },
       {
         "id": "certs",
         "icon": "verified",
-        "title": "Certifications",
+        "title": "Certifications & Degrees",
         "type": "list",
         "items": [
+          "B.Sc. Software Development — BYU Idaho (In progress)",
+          "B.Sc. Systems & Networks Administration — ESGAE",
           "SAS Certified Associate: Modeling Using SAS Visual Statistics",
           "SAS Certified Specialist: Visual Business Analytics Using SAS Viya",
           "SAS Certified Associate: Programming Fundamentals Using SAS 9.4",
@@ -168,9 +242,18 @@
       }
     ],
     "spoken_label": "SPOKEN LANGUAGES",
-    "spoken": ["Français — Natif", "English — Advanced"],
+    "spoken": ["Français — Native", "English — Advanced"],
     "professional_label": "PROFESSIONAL SKILLS",
-    "professional": ["Team Leadership", "Time Management", "Critical Thinking", "Problem Solving", "Professional Writing", "Data Analysis", "Data Visualization", "Linux / Bash", "Algorithms & Data Structures"]
+    "professional": [
+      "Microservices & Edge Architecture",
+      "RAG & AI Truth Management Design",
+      "Mobile Money Payment Orchestration",
+      "Technical Leadership & Team Management",
+      "UI/UX Design Systems (60 FPS)",
+      "Performance Optimization & Latency Control",
+      "Complex Problem Solving",
+      "Linux / Bash Systems Administration"
+    ]
   },
   "cta": {
     "label": "OPEN FOR OPPORTUNITIES",
@@ -193,7 +276,13 @@
     "email_label": "EMAIL ADDRESS",
     "email_placeholder": "email@example.com",
     "subject_label": "SUBJECT",
-    "subjects": ["General Inquiry", "Project Collaboration", "Technical Lead / Consulting", "Job Opportunity", "Media & Press"],
+    "subjects": [
+      "General Inquiry",
+      "Project Collaboration",
+      "Technical Lead / Consulting",
+      "Job Opportunity",
+      "Media & Press"
+    ],
     "message_label": "YOUR MESSAGE",
     "message_placeholder": "Briefly describe your project or idea",
     "submit": "SEND MESSAGE",
