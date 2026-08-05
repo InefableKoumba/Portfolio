@@ -31,7 +31,7 @@ const cv_data = {
   experience: [
     {
       company: "FRANZER OÜ",
-      role: "Founder & Technical Lead",
+      role: "Lead Developer",
       location: "Brazzaville, Congo",
       start_date: "January 2024",
       end_date: "Present",

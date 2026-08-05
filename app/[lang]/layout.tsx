@@ -39,8 +39,8 @@ export async function generateMetadata({
   return {
     title: "Inefable Koumba — Software Developer & Technical Lead",
     description: isFr
-      ? "Inefable Koumba est Développeur Logiciel et Responsable Technique basé à Brazzaville, Congo. Fondateur de FRANZER OÜ. Spécialisé en full-stack, applications mobiles et architecture de plateformes d'entreprise."
-      : "Inefable Koumba is a Software Developer and Technical Lead based in Brazzaville, Congo. Founder of FRANZER OÜ. Specializing in full-stack engineering, mobile apps, and enterprise platform architecture.",
+      ? "Inefable Koumba est Développeur Logiciel et Responsable Technique basé à Brazzaville, Congo (Lead Developer chez FRANZER OÜ). Spécialisé en full-stack, applications mobiles et architecture de plateformes d'entreprise."
+      : "Inefable Koumba is a Software Developer and Technical Lead based in Brazzaville, Congo (Lead Developer at FRANZER OÜ). Specializing in full-stack engineering, mobile apps, and enterprise platform architecture.",
     keywords: [
       "Inefable Koumba",
       "Software Developer",

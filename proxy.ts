@@ -10,7 +10,7 @@ function getLocale(request: NextRequest): string {
   for (const lang of preferred) {
     if (hasLocale(lang)) return lang
   }
-  return 'en'
+  return 'fr'
 }
 
 export function proxy(request: NextRequest) {

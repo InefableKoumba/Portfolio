@@ -12,10 +12,10 @@
     "headline_1": "Building robust software with",
     "headline_italic": "architectural",
     "headline_2": "clarity.",
-    "bio": "I'm Inefable Koumba — Software Developer & Technical Lead. Founder of FRANZER OÜ. I architect and engineer full-stack platforms, mobile applications, and high-throughput payment solutions that power real businesses in emerging markets and beyond.",
+    "bio": "I'm Inefable Koumba — Software Developer & Technical Lead. Lead Developer at FRANZER OÜ. I architect and engineer full-stack platforms, mobile applications, and high-throughput payment solutions that power real businesses in emerging markets and beyond.",
     "cta_work": "View My Work",
     "cta_contact": "Get in Touch",
-    "badge": "EST. 2024 / FRANZER OÜ",
+    "badge": "FRANZER OÜ / LEAD DEVELOPER",
     "stats": [
       { "value": "4+", "label": "Years of Experience" },
       { "value": "10+", "label": "Projects Delivered" },
@@ -28,10 +28,23 @@
     "date_range": "2022 — 2025",
     "projects": [
       {
+        "id": "jecontribue-crowdfunding",
+        "name": "JE CONTRIBUE",
+        "tags": ["FINTECH", "CROWDFUNDING", "NEXT.JS 16", "NESTJS"],
+        "description": "Multi-tenant crowdfunding platform powering seamless cross-border donations with real-time payment orchestration.",
+        "link": "https://jecontribue.com"
+      },
+      {
         "id": "volten",
         "name": "Volten AI",
         "tags": ["AI ORCHESTRATION", "MICROSERVICES", "WORKFLOW AUTOMATION"],
         "description": "Omnichannel AI orchestration and workflow automation platform. Built on a microservices architecture for scalable, reliable enterprise AI delivery."
+      },
+      {
+        "id": "koyeba",
+        "name": "Koyeba",
+        "tags": ["MULTIPLAYER GAMING", "EXPO SDK 57", "CLOUDFLARE EDGE", "TURSO"],
+        "description": "Real-time multiplayer trivia, gaming tournaments, and brain-battles mobile platform backed by Cloudflare Edge & offline-first SQLite."
       },
       {
         "id": "rhodium",
@@ -46,19 +59,33 @@
         "description": "Mobile payment & remittance with MTN MoMo and Airtel Money integration, card issuance, and account top-up."
       },
       {
-        "id": "luxembourg",
-        "name": "Sandweiler & Berdorf",
+        "id": "sandweiler",
+        "name": "Sandweiler.lu",
         "tags": ["WEB", "CMS", "LUXEMBOURG"],
-        "description": "High-fidelity municipal websites for Sandweiler and Berdorf (Luxembourg) with seamless CMS integration."
+        "description": "High-fidelity official municipal platform for the Municipality of Sandweiler (Luxembourg) featuring seamless CMS integration and citizen services.",
+        "link": "https://sandweiler.lu/"
+      },
+      {
+        "id": "berdorf",
+        "name": "Berdorf.lu",
+        "tags": ["WEB", "CMS", "LUXEMBOURG"],
+        "description": "Official municipal web application for the Municipality of Berdorf (Luxembourg) delivering dynamic content management and fluid citizen UX.",
+        "link": "https://berdorf.lu/"
+      },
+      {
+        "id": "rhoptique",
+        "name": "Belle Vue RHOP",
+        "tags": ["PAYLOAD CMS 3", "NEXT.JS 16", "TURSO SQLITE", "CLOUDFLARE R2"],
+        "description": "Full-stack web platform & headless CMS for optical clinic management, vision consultations, and eyewear e-commerce in Brazzaville."
       }
     ]
   },
   "about": {
     "label": "THE PERSON",
-    "headline_1": "Engineer, founder, and",
+    "headline_1": "Engineer and",
     "headline_italic": "problem-solver",
     "headline_2": "at heart.",
-    "bio_1": "I'm Inefable Koumba, a Software Developer and Technical Lead based in Brazzaville, Republic of the Congo. I founded FRANZER OÜ in 2024 to build enterprise software and payment solutions that serve real businesses across Africa and beyond.",
+    "bio_1": "I'm Inefable Koumba, a Software Developer and Technical Lead based in Brazzaville, Republic of the Congo. I work as the Lead Developer at FRANZER OÜ building enterprise software and payment solutions that serve real businesses across Africa and beyond.",
     "bio_2": "My work spans the full stack — from designing microservices architectures and high-throughput backends in Go to crafting pixel-perfect mobile interfaces with Flutter and React Native. I care deeply about both engineering quality and the human experience on the other side of the screen.",
     "bio_3_prefix": "I'm currently pursuing a",
     "bio_3_degree": "Bachelor's in Software Development",
@@ -83,7 +110,7 @@
       {
         "period": "JAN 2024 — PRESENT",
         "company": "FRANZER OÜ",
-        "role": "Founder & Technical Lead",
+        "role": "Lead Developer & Technical Lead",
         "desc": "Architectural decisions, backend high-throughput integrations & UI/UX engineering for enterprise applications and payment solutions.",
         "current": true
       },

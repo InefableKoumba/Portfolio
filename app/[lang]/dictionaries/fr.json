@@ -12,10 +12,10 @@
     "headline_1": "Construire des logiciels robustes avec une",
     "headline_italic": "clarté architecturale",
     "headline_2": ".",
-    "bio": "Je suis Inefable Koumba — Développeur Logiciel & Responsable Technique. Fondateur de FRANZER OÜ. Je conçois et réalise des plateformes full-stack, des applications mobiles et des solutions de paiement haute performance qui soutiennent de véritables entreprises dans les marchés émergents et au-delà.",
+    "bio": "Je suis Inefable Koumba — Développeur Logiciel & Responsable Technique. Développeur principal chez FRANZER OÜ. Je conçois et réalise des plateformes full-stack, des applications mobiles et des solutions de paiement haute performance qui soutiennent de véritables entreprises dans les marchés émergents et au-delà.",
     "cta_work": "Voir mes projets",
     "cta_contact": "Me contacter",
-    "badge": "FONDÉ EN 2024 / FRANZER OÜ",
+    "badge": "FRANZER OÜ / LEAD DEVELOPER",
     "stats": [
       { "value": "4+", "label": "Ans d'expérience" },
       { "value": "10+", "label": "Projets livrés" },
@@ -28,10 +28,23 @@
     "date_range": "2022 — 2025",
     "projects": [
       {
+        "id": "jecontribue-crowdfunding",
+        "name": "JE CONTRIBUE",
+        "tags": ["FINTECH", "CROWDFUNDING", "NEXT.JS 16", "NESTJS"],
+        "description": "Plateforme de collecte de fonds multi-tenants avec orchestration de paiements en temps réel et Mobile Money.",
+        "link": "https://jecontribue.com"
+      },
+      {
         "id": "volten",
         "name": "Volten AI",
         "tags": ["ORCHESTRATION IA", "MICROSERVICES", "AUTOMATISATION"],
         "description": "Plateforme d'orchestration IA omnicanale et d'automatisation des flux. Construite sur une architecture microservices pour une livraison d'IA d'entreprise scalable et fiable."
+      },
+      {
+        "id": "koyeba",
+        "name": "Koyeba",
+        "tags": ["MULTIPLAYER GAMING", "EXPO SDK 57", "CLOUDFLARE EDGE", "TURSO"],
+        "description": "Plateforme mobile de quiz multijoueur en temps réel, tournois et défis avec synchronisation Edge Cloudflare et fonctionnement offline-first."
       },
       {
         "id": "rhodium",
@@ -46,19 +59,33 @@
         "description": "Paiement mobile & transfert d'argent avec intégration MTN MoMo et Airtel Money, émission de cartes et rechargement de compte."
       },
       {
-        "id": "luxembourg",
-        "name": "Sandweiler & Berdorf",
+        "id": "sandweiler",
+        "name": "Sandweiler.lu",
         "tags": ["WEB", "CMS", "LUXEMBOURG"],
-        "description": "Sites municipaux haute-fidélité pour Sandweiler et Berdorf (Luxembourg) avec intégration CMS transparente."
+        "description": "Site municipal officiel haute-fidélité pour la Commune de Sandweiler (Luxembourg) avec intégration CMS transparente et services citoyens.",
+        "link": "https://sandweiler.lu/"
+      },
+      {
+        "id": "berdorf",
+        "name": "Berdorf.lu",
+        "tags": ["WEB", "CMS", "LUXEMBOURG"],
+        "description": "Site municipal officiel pour la Commune de Berdorf (Luxembourg) offrant une expérience numérique fluide et une gestion de contenu dynamique.",
+        "link": "https://berdorf.lu/"
+      },
+      {
+        "id": "rhoptique",
+        "name": "Belle Vue RHOP",
+        "tags": ["PAYLOAD CMS 3", "NEXT.JS 16", "TURSO SQLITE", "CLOUDFLARE R2"],
+        "description": "Plateforme web et CMS headless pour cabinet d'optique à Brazzaville, consultations visuelles et catalogue de lunetterie."
       }
     ]
   },
   "about": {
     "label": "LA PERSONNE",
-    "headline_1": "Ingénieur, fondateur et",
+    "headline_1": "Ingénieur et",
     "headline_italic": "résolveur de problèmes",
     "headline_2": "dans l'âme.",
-    "bio_1": "Je suis Inefable Koumba, Développeur Logiciel et Responsable Technique basé à Brazzaville, en République du Congo. J'ai fondé FRANZER OÜ en 2024 pour concevoir des logiciels d'entreprise et des solutions de paiement au service de véritables entreprises à travers l'Afrique et au-delà.",
+    "bio_1": "Je suis Inefable Koumba, Développeur Logiciel et Responsable Technique basé à Brazzaville, en République du Congo. Je travaille en tant que Développeur Principal chez FRANZER OÜ pour concevoir des logiciels d'entreprise et des solutions de paiement au service de véritables entreprises à travers l'Afrique et au-delà.",
     "bio_2": "Mon travail couvre l'ensemble du stack — de la conception d'architectures microservices et de backends haute performance en Go à la réalisation d'interfaces mobiles pixel-perfect avec Flutter et React Native. Je me soucie profondément de la qualité technique et de l'expérience humaine de l'autre côté de l'écran.",
     "bio_3_prefix": "Je poursuis actuellement un",
     "bio_3_degree": "Bachelor en Développement Logiciel",
@@ -83,7 +110,7 @@
       {
         "period": "JANV. 2024 — PRÉSENT",
         "company": "FRANZER OÜ",
-        "role": "Fondateur & Responsable Technique",
+        "role": "Lead Developer / Responsable Technique",
         "desc": "Décisions architecturales, intégrations backend haute performance & ingénierie UI/UX pour applications d'entreprise et solutions de paiement.",
         "current": true
       },

@@ -9,6 +9,7 @@ import CtaBanner from '@/components/CtaBanner'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import ScrollInit from '@/components/ScrollInit'
+import GrainyGradients from '@/components/GrainyGradients'
 
 export default async function Page({
   params,
@@ -23,12 +24,13 @@ export default async function Page({
 
   return (
     <>
+      <GrainyGradients />
       <ScrollInit />
       <Nav dict={dict.nav} locale={locale} />
       <main>
         <Hero dict={dict.hero} />
         <About dict={dict.about} />
-        <Work dict={dict.work} />
+        <Work dict={dict.work} locale={locale} />
         <Skills dict={dict.skills} />
         <CtaBanner dict={dict.cta} />
         <Contact dict={dict.contact} />
