@@ -89,7 +89,7 @@ export default function Nav({ dict, locale }: NavProps) {
         className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 border-b ${
           scrolled
             ? "bg-[#0E1A2B]/95 backdrop-blur-md border-brand-signal/30 py-3 shadow-[0_10px_30px_rgba(0,0,0,0.5)]"
-            : "bg-[#0E1A2B]/80 backdrop-blur-sm border-outline/40 py-4"
+            : "bg-[#0E1A2B]/80 backdrop-blur-sm border-outline/40 py-3 md:py-4"
         }`}
       >
         <nav
@@ -211,7 +211,7 @@ export default function Nav({ dict, locale }: NavProps) {
         {menuOpen && (
           <div
             id="mobile-menu"
-            className="md:hidden border-t border-outline/40 bg-[#0E1A2B] pt-4 pb-6 px-6 flex flex-col gap-4 animate-in fade-in slide-in-from-top-2 duration-200"
+            className="md:hidden border-t border-outline/40 bg-[#0E1A2B] pt-4 pb-6 px-6 flex flex-col gap-4 max-h-[500px] opacity-100 overflow-visible transition-all duration-300"
           >
             <div className="flex flex-col gap-2">
               {links.map((l) => {
