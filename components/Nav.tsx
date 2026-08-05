@@ -41,7 +41,7 @@ export default function Nav({ dict, locale }: NavProps) {
     { code: "fr", name: "Français", flag: "🇫🇷" },
   ];
 
-  const currentLang = languages.find((l) => l.code === locale) || languages[0];
+  const currentLang = languages.find((l) => l.code === locale) || languages[1];
 
   useEffect(() => {
     function handleScroll() {
@@ -127,9 +127,6 @@ export default function Nav({ dict, locale }: NavProps) {
                   }`}
                 >
                   {l.label}
-                  {isActive && (
-                    <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-brand-data animate-pulse"></span>
-                  )}
                 </a>
               );
             })}

@@ -66,7 +66,7 @@ export default function Hero({ dict }: { dict: HeroDict }) {
             {/* Cutout Portrait Container with Bottom Smooth Fade Gradient */}
             <div className="absolute -bottom-40 w-[140%] h-[120%] flex items-center justify-center z-10 pointer-events-none overflow-hidden">
               <Image
-                src="/assets/img/kims.png"
+                src="/assets/img/kims.webp"
                 alt="Inefable Koumba — portrait"
                 fill
                 priority
